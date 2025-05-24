@@ -1,0 +1,41 @@
+.about-5
+	.content
+		@apply hidden
+		&.active
+			@apply block
+	.about-5-slide
+		@apply flex flex-col xl:flex-row justify-center
+		.wrap-button-slide
+			.btn-prev
+				@apply left-[-3.5rem]
+			.btn-next
+				@apply right-[-3.5rem]
+	.swiper
+		@apply flex justify-center w-full
+		.swiper-slide
+			@apply w-auto mx-2
+			.step
+				line-height: calc( 26 / 20 )
+				@apply border-b-2 border-b-transparent transition-all ease-in-out duration-300
+				&.active
+					@apply text-Primary-Red border-b-Primary-Orange
+				&:hover
+					@apply text-Primary-Red border-b-Primary-Orange
+			&-active
+				.step
+					@apply text-Primary-Red border-b-Primary-Orange
+@media (max-width: 1023.98px)
+	.about-5
+		.content
+			@apply w-full
+@media (max-width: 767.98px)
+	.about-5
+		.swiper
+			.item
+				@apply block
+				.line
+					@apply hidden
+			.swiper-slide
+				@apply ml-0
+				.step
+					@apply border-transparent

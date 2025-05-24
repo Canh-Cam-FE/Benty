@@ -1,0 +1,41 @@
+.home-4
+	.swiper
+		.item
+			
+			@apply rounded-2xl bg-Neutral-White relative z-1 
+			&::before
+				content: ""
+				border: 1px dashed #6493AC
+				@apply absolute top-0 left-0 rounded-2xl right-0 bottom-0 pointer-events-none z-1
+			.content
+				@apply w-full p-5
+				.top
+					h3
+						line-height: calc( 32 / 24 )
+			.image
+				@apply relative z-2
+		.home-4-scroll
+			@apply inline-flex
+			.swiper-scrollbar 
+				@apply w-full h-[4px] rounded-lg bg-Neutral-100
+			/* Tùy chỉnh phần tay cầm của thanh cuộn */
+				
+			.swiper-scrollbar .swiper-scrollbar-drag 
+				@apply bg-Primary-Red h-[4px] rounded-none #{!important}
+			.swiper-scrollbar:hover .swiper-scrollbar-drag 
+				@apply bg-Primary-Red
+			.swiper-scrollbar::-webkit-scrollbar 
+				width: 10px 
+				height: 8px 
+			.swiper-scrollbar::-webkit-scrollbar-track 
+				background: #f0f0f0
+				border-radius: 10px
+	.indicator-swipe:not(.custom)
+		@apply top-[114%] right-[0.125rem]
+@media (max-width: 1023.98px)
+	.home-4
+		.swiper
+			.item
+				@apply p-3 gap-3
+				.content
+					@apply p-0

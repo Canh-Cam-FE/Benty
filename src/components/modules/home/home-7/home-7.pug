@@ -1,0 +1,17 @@
+section.home-7(class="lg:pb-20 pb-10 bg-bg")
+	.container 
+		h2(class="title-48 mb-base") Khuyến mãi
+		.home-7-slide(class="relative")
+			.swiper
+				.swiper-wrapper 
+					-for(var i = 0; i < 5; i++)
+						.swiper-slide 
+							.item 							
+								a(href="#" class="img-ratio ratio:pt-[587_440] rounded-2xl")
+									+PugImg() 
+			.wrap-button-slide(class="hidden xl:block")
+				.btn.btn-prev.btn-sw-1
+				.btn.btn-next.btn-sw-1
+			.wrap-button-slide-mobile(class="flex xl:hidden items-center justify-center mt-base gap-3")
+				.btn.btn-prev.btn-sw-1
+				.btn.btn-next.btn-sw-1

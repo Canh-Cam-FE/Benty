@@ -1,0 +1,218 @@
+body.home
+	.header
+		@apply rem:py-[10px]  sticky left-0 right-0 z-100 top-0 rem:h-[80px]
+		@apply rem:px-[60px]
+		&::before
+			content: ""
+			background: linear-gradient(180deg, rgba(138, 134, 123, 0.60) 0%, rgba(138, 134, 123, 0.00) 100%)
+			@apply absolute w-full top-0 left-0 pointer-events-none rem:h-[156px] -z-10
+		.header-logo
+			img.logo-active
+				@apply hidden
+		.header-main
+			@apply xl:flex hidden items-center justify-between relative z-[1100]
+		.header-menu
+			@apply hidden
+		.header-nav
+			@apply flex  items-center justify-between rem:gap-[52px]
+			li
+				a
+					@apply rem:text-[20px] font-bold text-Neutral-Body hover:text-Primary-Red
+				&[class*='current']
+					&>a
+						@apply text-Primary-Red
+		.header-bar-icon
+			@apply w-7 h-7 flex-shrink-0 
+			@apply inline-flex items-center justify-center 
+			@apply text-Neutral-White  text-32 cursor-pointer
+		
+		.header-right
+			.header-search
+				@apply rem:w-[32px]
+				img.search-active
+					@apply w-full h-full object-cover hidden
+			.header-language
+				@apply hidden
+			.header-user
+				i
+					@apply rem:text-[25px] text-Neutral-White font-light
+			.header-cart
+				a
+					@apply w-10 h-10 inline-flex items-center justify-center rounded-full bg-Neutral-White
+					i
+						@apply rem:text-[18px] font-normal text-Primary-Red
+		&.active
+			background-image: none
+			@apply rem:py-[10px]  bg-Neutral-White sticky left-0 right-0 z-100 top-0 rem:h-[80px]
+			@apply border-b border-b-Primary-Red rem:px-[60px]
+			&::before
+				content: none
+			.header-logo
+				img.logo-active
+					@apply block
+				img.logo-default
+					@apply hidden
+			.header-search
+				img.search-active
+					@apply block
+				img.search-default
+					@apply hidden
+			.header-user
+				i
+					@apply rem:text-[25px] text-Neutral-400 font-light
+			.header-menu
+				@apply block
+			.header-bar
+				@apply hidden
+			.header-right
+				.header-auth
+					.header-language
+						@apply block #{!important}
+			.header-cart
+				a
+					@apply bg-Neutral-50
+					i
+						@apply text-Neutral-400
+
+.header
+	background-image: none
+	@apply rem:py-[10px]  bg-Neutral-White sticky left-0 right-0 z-100 top-0 rem:h-[80px]
+	@apply border-b border-b-Primary-Red rem:px-[60px]
+	.header-main
+		@apply xl:flex hidden items-center justify-between relative z-[1100]
+	.header-nav
+		@apply flex  items-center justify-between rem:gap-[52px]
+		li
+			a
+				@apply rem:text-[20px] font-bold text-Neutral-Body hover:text-Primary-Red
+			&[class*='current']
+				&>a
+					@apply text-Primary-Red
+	.header-bar-icon
+		@apply hidden
+	.header-user
+		i
+			@apply rem:text-[25px] text-Neutral-400 font-light
+	.header-cart
+		a
+			@apply w-10 h-10 inline-flex items-center justify-center rounded-full bg-Neutral-50
+			i
+				@apply rem:text-[18px] font-normal text-Neutral-400
+	.header-search
+		@apply cursor-pointer
+
+	.search-bar-container
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		padding: 1.5rem 15px
+		display: flex
+		box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05)
+		background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75))
+		background-size: cover
+		backdrop-filter: blur(5px) !important
+		height: 100vh
+		width: 100%
+		align-items: center
+		flex-direction: column
+		z-index: 1001
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.3s ease-in-out, visibility 0s 0.3s
+
+.search-bar-container.active
+	opacity: 1
+	visibility: visible
+	transition: opacity 0.3s ease-in-out, visibility 0s
+.nav-links
+	position: fixed
+	top: 0
+	left: 0
+	background-image: radial-gradient(1738.99% 141.42% at 100% 0%, #76AECC 0%, #6493AC 100%)
+	height: 100vh
+	width: 100vw
+	flex-direction: column
+	pointer-events: none
+	clip-path: circle(0px at 0% 0%)
+	-webkit-clip-path: circle(0px at 0% 0%)
+	transition: clip-path 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease
+	z-index: 999
+	display: flex
+	opacity: 0
+	
+	&.open
+		clip-path: circle(600px at 0% 0%)
+		-webkit-clip-path: circle(600px at 0% 0%)
+		pointer-events: auto
+		display: flex
+		opacity: 1
+
+		
+	.nav-links-social 
+		@apply ml-15 mt-13
+		.social
+			@apply flex items-center gap-3
+			a
+				@apply w-10 h-10 inline-flex items-center justify-center
+				@apply bg-Neutral-White text-Primary-Red rounded-full
+	ul
+		@apply rem:w-[400px] ml-15 mt-30 flex flex-col gap-3
+		li
+			a
+				line-height: calc( 38 / 32 )
+				@apply text-32 font-bold text-Neutral-White normal-case
+				@apply border-b border-transparent
+				&:hover
+					@apply border-b border-b-Neutral-White
+
+@media (max-width: 1279.98px)
+	.header		
+		@apply px-[12px] bg-Neutral-White shadow-Dropshadow-Light #{!important}
+		&::before
+			content: none !important
+		.header-main-mobile
+			@apply h-full flex items-center justify-between
+			.header-logo-mobile
+				@apply absolute left-2/4 -translate-x-2/4 top-2/4 -translate-y-2/4
+				a
+					@apply w-full h-full  block
+					img
+						@apply w-full h-full object-contain
+			.header-bar-mobile
+				.header-bar					
+					@apply w-10 h-10 inline-flex bg-Primary-Red text-Neutral-White items-center justify-center text-2xl rounded-1
+			.header-search					
+				@apply w-10 h-10 inline-flex bg-Primary-Red text-Neutral-White items-center justify-center text-2xl rounded-1
+			.header-auth-mobile
+				.header-cart
+					a
+						@apply bg-Primary-Red 
+						i
+							@apply text-Neutral-White
+	
+		.nav-links
+			clip-path: none !important
+			pointer-events: none
+			transition: transform 0.5s ease, opacity 0.5s ease
+			transform: translateX(100%)
+			height: calc(100dvh - var(--header-height))
+			@apply top-[var(--header-height)] w-full z-999 overflow-y-auto overflow-hidden flex 
+			ul
+				@apply flex flex-col items-stretch w-full mt-0 ml-0 gap-5  px-[16px] py-6
+				li
+					
+					a
+						@apply text-Neutral-White border-b border-b-transparent inline-flex items-center text-[18px]
+				li
+					&[class*='current']
+						&>a
+							@apply border-b border-b-Neutral-White
+			.nav-links-social
+				@apply ml-4 mt-5
+	body.isOpenMenu
+		.nav-links
+			transform: translateX(0)
+			opacity: 1
+			pointer-events: auto
+		

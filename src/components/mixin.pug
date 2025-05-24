@@ -1,0 +1,162 @@
+//- button animation icon di chuyển sang phải
+mixin button() 
+	.button(class="mt-10")
+		a(href="#" class="btn-lined")
+			span xem them 
+			span(class="icon") 
+				i.fa-solid.fa-arrow-right
+				i.fa-solid.fa-arrow-right
+mixin subscribeForm()
+	.subscribe
+		.subscribefrm
+			input.subscribeemail(type="text", placeholder="Nhập email của bạn...")
+			button.subscribebutton Gửi
+mixin PugImg(url="./img/1.jpg")
+	img(data-src=url, alt="", class="lozad " + attributes.class)
+mixin btnViewAll(text="Xem thêm")
+	a(href="" x-link class='btn-primary-2 btn ' + attributes.class)
+		span=text
+		img(src=imgButton, alt="", class="w-5 h-5 svg")
+mixin HeaderLanguageVertical()
+	ul 
+		li.wpml-ls-item
+			a(href="") 
+				span.wpml-ls-native VN
+		ul 
+			li 
+				a(href="") 
+					span EN
+mixin HeaderLanguageHorizontal()
+	ul 
+		li.wpml-ls-item
+			a(href="") 
+				span.wpml-ls-native VN
+		li.wpml-ls-item
+			a(href="") 
+				span.wpml-ls-native VN
+mixin BtnPrimary(text="")
+	a(href="", class='btn-primary btn ' + attributes.class)
+		span=text
+
+mixin btnPrimary()
+	.btn-btn-primary(class="inline-flex items-center group")
+		button(class="btn-primary py-3 px-5 border border-Neutral-900 group-hover:border-Primary-Primary_01  rem:h-[50px]")
+			a(href="#" class="text-lg font-semibold") Explore 
+		a(href="#" class="btn-lined group-hover:border-Primary-Primary_01 text-lg font-normal flex items-center gap-2")
+			span(class="icon to-right") 
+				i.fa-regular.fa-arrow-right
+				i.fa-regular.fa-arrow-right
+mixin btnSecondary()
+	.btn-btn-secondary(class="inline-flex items-center group")
+		button(class="btn-primary py-3 px-5 border border-Neutral-White  rem:h-[50px]")
+			a(href="#" class="text-lg font-semibold") Explore 
+		a(href="#" class="btn-lined  text-lg font-normal flex items-center gap-2")
+			span(class="icon to-right") 
+				i.fa-regular.fa-arrow-right
+				i.fa-regular.fa-arrow-right
+mixin ButtonPrimary(text)
+	a(href="#" class="button-primary")
+		span=text 
+		i.fa-regular.fa-chevron-right
+mixin ButtonSecondary(text)
+	a(href="#" class="button-secondary") 
+		span=text
+mixin toolFixed()
+	.tool-fixed-cta
+		.btn.button-to-top
+			.btn-icon
+				.icon 
+		a.btn.btn-content
+			.btn-icon
+				.icon
+					i.fa-light.fa-location-dot
+			.content Chi nhánh
+		a.btn.btn-content
+			.btn-icon
+				.icon
+					i.fa-light.fa-phone
+			.content 1900 2273 – (028) 7100 0001
+		.btn.btn-content.btn-social
+			.btn-icon
+				.icon
+					i.fa-light.fa-messages
+			.content
+				ul 
+					li 
+						a(href="") 
+							img(src="./img/social/mess.png", alt="facebook", class="")
+					li 
+						a(href="") 
+							img(src="./img/social/zalo.png", alt="zalo", class="")
+					li 
+						a(href="") 
+							img(src="./img/social/mess-bot.png", alt="facebook", class="")
+mixin ProductItem()
+	.product-item(class="group")
+		.image(class="rounded-2xl border border-Neutral-100 group relative overflow-hidden")
+			a(href="#" class="img-ratio ratio:pt-[360_320] rounded-2xl zoom-img")
+				+PugImg("./img/product.png")
+			.button-add-cart(class="absolute flex justify-center bottom-0 left-0 w-full translate-y-full opacity-0 group-hover:-translate-y-10 group-hover:opacity-100 transition-all duration-500 z-10")
+				a(href="#" class="btn-add-cart")  
+					span THÊM VÀO GIỎ HÀNG
+					.icon 
+						i.fa-regular.fa-cart-flatbed-boxes
+		.content(class="mt-4")
+			.color 
+				ul.color-list 
+					li 
+						span 
+					li 
+						span 
+					li 
+						span 
+			.content-info 
+				h3(class="text-lg font-normal text-Neutral-Body mb-2 group-hover:text-Primary-Red")
+					a(href="#") Body chip cài vai Benty
+				.price(class="flex items-center gap-3 mb-5")
+					.price-old(class="text-xl font-bold text-Primary-Red") 105.000 ₫
+					.discount(class="bg-Primary-Orange rounded-[32px] px-3 py-2 text-sm font-black text-Neutral-White tracking-[0.56px]") -30%
+					.price-new(class="font-primary2 line-through text-Neutral-300 font-normal") 79.000 ₫
+				.sell-line 
+					
+					span Bán chạy
+				
+mixin NewLetterSection()
+	.newletter(setBackground="./img/home-10-bg.png" class="")
+		.newletter-content(class="xl:rem:w-[1108px] w-full")
+			.wrap(class="py-6 rounded-lg w-full lg:rem:h-[460px] h-auto lg:rem:pl-[260px] px-[16px] flex flex-col justify-center relative z-20")
+				.content(class="lg:rem:w-[640px] w-full")
+					h2(class="title-48 !text-Neutral-White mb-base") 
+						| Benty có một món quà nhỏ 
+						br
+						| gửi đến mẹ
+				form(action="")
+					.form-group
+						input(type="text" placeholder="Nhập email để nhận quà mẹ nhé...")
+						.icon 
+							i.fa-regular.fa-paper-plane
+mixin Banner()
+	.banner(class="relative")
+		a(href="#" class="img-ratio ratio:pt-[640_1920]")
+			+PugImg("./img/banner-2.png") 
+		.global-breadcrumb
+			.container
+				nav(aria-label="breadcrumbs", class="rank-math-breadcrumb")
+					p
+						a(href="#") Trang chủ
+						span(class="separator")  | 
+						span(class="last") Về chúng tôi
+mixin AboutSection()
+	.about-section-global(class="section-py")
+		.container-main(class="xl:rem:w-[1412px] w-full mx-auto xl:px-0 px-[15px]")
+			.wrap(class="flex flex-col md:flex-row items-center lg:gap-20 gap-10")
+				.col-left(class="lg:rem:w-[680px] md:w-2/4 w-full")
+					.image 
+						a(href="#" class="img-ratio ratio:pt-[520_680] rounded-2xl zoom-img")
+							+PugImg() 
+				.col-right(class="lg:flex-1 md:w-2/4 w-full")
+					h2(class="title-48 mb-base") Một thương hiệu – một lời hứa
+					.format-content(class="gap-5 text-2xl font-normal")
+						p Benty không phải là hãng đầu tiên mẹ biết đến.
+						p Nhưng Benty mong sẽ là thương hiệu đầu tiên mẹ nhớ tới khi cần đồ cho bé.
+						p Và mỗi lần như thế, Benty hứa: sẽ luôn làm tử tế, để mỗi lần mẹ mở gói hàng ra là thấy hài lòng

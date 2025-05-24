@@ -1,0 +1,19 @@
+section.about-6(class="section-py bg-Primary-Silver")
+	.container 
+		h2(class="title-48 mb-base") Quần áo là lớp bảo vệ đầu tiên của bé
+		.format-content(class="gap-3 text-2xl font-normal")
+			p Làn da của bé mỏng manh và nhạy cảm.
+			p Tụi mình chọn vải mềm, không cộm tem, không chỉ thừa – để bé luôn thấy dễ chịu, và mẹ thì yên tâm.
+			p Với Benty, quần áo không chỉ để mặc.
+			p Đó là lớp bảo vệ đầu tiên, ôm lấy bé từ những ngày còn chưa biết tự nói:
+			p “Con thấy khó chịu”.
+		.about-6-main(class="grid grid-cols-2 md:gap-8 gap-3 mt-base")
+			-for(var i = 0; i < 2; i++)
+				.item 
+					a(href="#" class="img-ratio ratio:pt-[384_684] zoom-img rounded-2xl")
+						+PugImg() 
+		.about-6-list(class="md:mt-8 mt-3 grid md:grid-cols-3 grid-cols-2 md:gap-8 gap-3")
+			-for(var i = 0; i < 3; i++)
+				.item 
+					a(href="#" class="img-ratio ratio:pt-[250_445] zoom-img rounded-2xl")
+						+PugImg() 

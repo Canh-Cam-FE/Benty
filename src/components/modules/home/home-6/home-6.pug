@@ -1,0 +1,57 @@
+section.home-6(class="section-40 bg-bg")
+	.container 
+		.home-6-content(class="bg-Neutral-White shadow-Dropshadow-Box rounded-[32px] lg:p-10 p-6 w-full xl:rem:w-[1480px] mx-auto")
+			h2(class="title-48 mb-6") Sản phẩm nổi bật
+			.wrap(data-toggle="tabslet")
+				ul.tabslet-tab
+					li.active
+						a(href="#tab1") Tháng 4 cùng Benty
+					li
+						a(href="#tab2") Bộ ba lỗ
+					li
+						a(href="#tab2") Bộ cộc tay
+					li
+						a(href="#tab2") Bộ dài tay
+					li
+						a(href="#tab2") Áo khoác - Áo choàng
+					li
+						a(href="#tab2") Body
+					li
+						a(href="#tab2") Bộ cộc tay quần dài
+					li
+						a(href="#tab2") Bộ lửng
+					li
+						a(href="#tab2") Quần - áo lẻ
+					li
+						a(href="#tab2") Phụ kiện
+				.tabslet-content.active#tab1
+					.home-6-slide(class="relative mt-6")
+						.swiper 
+							.swiper-wrapper 
+								-for(var i = 0; i < 8; i++)
+									.swiper-slide 
+										+ProductItem()
+							.home-6-scroll(class="mt-base")
+								.swiper-scrollbar
+						.indicator-swipe.active
+							img(src="./img/chevron-left.svg", alt="" class="arrow")
+							img(src="./img/Finger.png", alt="" class="hand")
+							img(src="./img/chevron-right.svg", alt="" class="arrow")
+					.home-5-btn(class="flex mt-base justify-center")
+						+ButtonSecondary("Khám phá thêm")
+
+				.tabslet-content#tab2
+					.home-6-slide(class="relative mt-6")
+						.swiper 
+							.swiper-wrapper 
+								-for(var i = 0; i < 8; i++)
+									.swiper-slide 
+										+ProductItem()
+							.home-6-scroll(class="mt-base")
+								.swiper-scrollbar
+						.indicator-swipe.active
+							img(src="./img/chevron-left.svg", alt="" class="arrow")
+							img(src="./img/Finger.png", alt="" class="hand")
+							img(src="./img/chevron-right.svg", alt="" class="arrow")
+					.home-5-btn(class="flex mt-base justify-center")
+						+ButtonSecondary("Khám phá thêm 2")

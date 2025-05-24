@@ -1,0 +1,17 @@
+section.about-4(class="relative")
+	.container 
+		h2(class="title-48 mb-base") Hành trình tạo nên một bộ đồ Benty
+		.indicator-swipe.active
+			img(src="./img/chevron-left.svg", alt="" class="arrow")
+			img(src="./img/Finger.png", alt="" class="hand")
+			img(src="./img/chevron-right.svg", alt="" class="arrow")
+	.about-4-slide(class="relative")
+		.swiper 
+			.swiper-wrapper 
+				-for(var i = 0; i < 6; i++)
+					.swiper-slide 
+						.about-4-item 
+							.image 
+								a(href="#" class="img-ratio ratio:pt-[640_1280] rounded-[32px]")
+									+PugImg()
+			

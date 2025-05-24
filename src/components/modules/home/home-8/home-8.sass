@@ -1,0 +1,35 @@
+.home-8 
+	
+	.home-8-list 
+		@apply relative z-50 
+	
+		.item
+			@apply flex flex-col items-center gap-8  
+			&:nth-child(2)
+				align-self: start
+				@apply mt-[-3.2rem]
+			&:nth-child(3)
+				align-self: start
+				@apply mt-[-3.2rem]
+				
+			.number
+				border: 1px dashed #6493AC
+				letter-spacing: -1.6px
+				line-height: calc( 52 / 40 )
+				@apply rem:w-[160px] rem:h-[160px] rounded-full shadow-Dropshadow-Light text-Primary-Red transition-all ease-in-out duration-300 cursor-pointer
+				@apply bg-Neutral-White hover:bg-Primary-Red hover:text-Neutral-White
+				@apply inline-flex items-center justify-center rem:p-[30px] text-5xl font-black
+			.content				
+				h3
+					@apply text-2xl font-normal text-Neutral-Body whitespace-nowrap
+@media (max-width: 1023.98px)
+	.home-8 
+		.home-8-line
+			@apply hidden 
+		.home-8-list 
+			@apply grid-cols-2 gap-base mt-10
+			.item
+				&:nth-child(2)					
+					@apply mt-0
+				&:nth-child(3)					
+					@apply mt-0

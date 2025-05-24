@@ -1,0 +1,19 @@
+section.home-5(class="section-40 bg-bg")
+	.container 
+		.home-5-content(class="bg-Neutral-White shadow-Dropshadow-Box rounded-[32px] lg:p-10 p-6 w-full xl:rem:w-[1480px] mx-auto")
+			h3(class="rem:text-[36px] font-secondary font-bold text-Primary-Orange mb-6") FlashSale
+			.home-5-slide(class="relative")
+				.swiper 
+					.swiper-wrapper 
+						-for(var i = 0; i < 8; i++)
+							.swiper-slide 
+								+ProductItem()
+					.home-5-scroll(class="mt-base")
+						.swiper-scrollbar
+				.indicator-swipe.active
+					img(src="./img/chevron-left.svg", alt="" class="arrow")
+					img(src="./img/Finger.png", alt="" class="hand")
+					img(src="./img/chevron-right.svg", alt="" class="arrow")
+			.home-5-btn(class="flex mt-base justify-center")
+				+ButtonSecondary("Khám phá thêm")
+

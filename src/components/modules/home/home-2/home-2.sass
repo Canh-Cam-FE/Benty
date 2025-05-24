@@ -1,0 +1,26 @@
+.home-2
+	.col-right
+		.image
+			@apply relative
+			&::before
+				content: ""
+				border: 4px dashed  #6493AC
+				transform: rotate(-7.285deg)
+				box-sizing: border-box
+				@apply absolute w-full h-full top-0 left-10 pointer-events-none
+				@apply rounded-[32px] opacity-50 
+@media (max-width: 1279.98px)
+	.home-2
+		.col-right
+			.image
+				&::before
+					@apply left-0
+@media (max-width: 767.98px)
+	.home-2
+		.home-2-main
+			@apply gap-10
+		.col-right
+			.image
+				&::before
+					border: 3px dashed  #6493AC
+					@apply left-[5px] w-[98%]

@@ -1,0 +1,12 @@
+.global-breadcrumb
+	@apply bg-transparent border-b border-white absolute bottom-0 w-full
+	p
+		@apply h-[calc(48/1920*100rem)] flex items-center overflow-auto
+		a,span
+			@apply rem:text-[18px] text-Neutral-100 whitespace-nowrap font-normal
+		span.separator
+			@apply text-0 inline-flex
+			&::before
+				content: "/"
+				@apply font-awesome font-normal text-sm mx-2
+

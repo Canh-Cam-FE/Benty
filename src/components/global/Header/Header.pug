@@ -1,0 +1,86 @@
+header.header
+	form.search-bar-container(action="", class="")
+		.searchbox(class="w-full relative cursor-pointer") 
+			input#search-btn(type="text", class="searchinput", placeholder="Tìm kiếm...", class="px-4 py-2 rounded bg-Neutral-White shadow-lg w-full cursor-pointer")
+			.search-icon(class="absolute top-2/4 -translate-y-2/4 right-0 pr-5 text-Primary-Primary_01")
+				i.fa-sharp.fa-regular.fa-magnifying-glass
+	.header-main(class="")
+		.header-wrap(class="flex items-center rem:gap-[66px]")
+			.header-logo(class="rem:w-[163px]")
+				a(href="#" class="img-ratio ratio:pt-[60_163]")
+					img.logo-default(src="./img/logo-primary.svg", alt="") 
+					img.logo-active(src="./img/logo.svg", alt="") 
+			.header-bar-icon#menuToggle
+				i#menuIcon.fa-solid.fa-bars
+			.nav-language-mobile(class="opacity-0 invisible")
+				.header-en(class="rem:w-[36px]")
+					a(href="#" class="img-ratio")
+						img(src="./img/EN.svg", alt="") 
+
+		.header-menu(class="flex items-center justify-between h-full")
+			ul.header-nav 
+				li 
+					a(href="#") TRANG CHỦ 
+				li 
+					a(href="./about.html") MẸ ƠI, BENTY LÀ...
+				li 
+					a(href="#") SẢN PHẨM
+				li 
+					a(href="#") HỢP TÁC CÙNG BENTY
+				li 
+					a(href="#") HỖ TRỢ KHÁCH HÀNG
+				li 
+					a(href="#") TIN TỨC
+		.header-right(class="flex items-center gap-8")
+			.header-search 
+				img.search-default(src="./img/Search-white.svg", alt="")
+				img.search-active(src="./img/Search.svg", alt="")
+			.header-user 
+				i.fa-light.fa-user
+			.header-auth(class="flex items-center gap-3")
+				.header-cart 
+					a(href="#")
+						i.fa-light.fa-cart-flatbed-boxes
+				.header-language 
+					.header-en(class="rem:w-[36px]")
+						a(href="#" class="img-ratio")
+							img(src="./img/EN.svg", alt="") 
+	.header-main-mobile(class="xl:hidden block")
+		.header-left-mobile(class="flex items-center gap-2")
+			.header-bar-mobile
+				.header-bar 
+					i.fa-solid.fa-bars
+			.header-search
+				i.fa-regular.fa-magnifying-glass
+		.header-logo-mobile(class="w-[5rem] h-[40px]") 
+			a(href="#")
+				+PugImg("./img/logo.svg") 
+		.header-auth-mobile(class="flex items-center gap-3")
+			.header-language 
+				.header-en(class="rem:w-[36px]")
+					a(href="#" class="img-ratio")
+						img(src="./img/EN.svg", alt="") 
+			.header-cart 
+				a(href="#")
+					i.fa-light.fa-cart-flatbed-boxes
+	.nav-links#mobileMenu
+		ul(class="")
+			li 
+				a(href="#") Mẹ ơi, Benty là...
+			li 
+				a(href="#") Sản phẩm
+			li 
+				a(href="#") Hợp tác cùng Benty
+			li 
+				a(href="#") Hỗ trợ khách hàng
+			li 
+				a(href="#") Tin tức
+		.nav-links-social 
+			h4(class="text-xl font-normal text-Neutral-White mb-4") Kết nối
+			.social 
+				a(href="#") 
+					i.fa-brands.fa-facebook-f
+				a(href="#") 
+					i.fa-brands.fa-instagram
+				a(href="#") 
+					i.fa-brands.fa-tiktok

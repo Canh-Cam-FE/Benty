@@ -1,0 +1,19 @@
+.home-1
+	margin-top: calc(-1 * var(--header-height))
+	.wrap-button-slide
+		.btn-prev
+			left: 9rem
+
+		.btn-next
+			right: 9rem
+@media (max-width: 1279.98px)
+	.home-1
+		@apply mt-0
+@media (max-width: 767.98px)
+	.home-1-mobile
+		.swiper
+			.home-1-banner-mobile
+				height: calc(100svh - var(--header-height))
+			
+				img
+					@apply w-full h-full object-cover

@@ -1,0 +1,42 @@
+.about-4
+	.indicator-swipe:not(.custom)
+		@apply top-[2rem] right-[12rem]
+	.about-4-slide
+		.swiper
+			@apply z-10
+		
+		.swiper-slide
+			filter: grayscale(100%) !important
+			transition: filter 0.3s ease-in-out
+			@apply opacity-70 rem:w-[1280px]
+		.swiper-slide-active
+			mix-blend-mode: luminosity
+			filter: grayscale(0%) !important
+			@apply opacity-100
+	.about-4-item 
+		@apply w-full cursor-pointer
+		img
+			@apply cursor-pointer
+	.about-4-btn
+		@apply mt-0 px-28
+@media (max-width: 1279.98px)
+	.about-4
+		.about-4-slide
+			.swiper-slide
+				@apply w-[48rem] #{!important}
+@media (max-width: 1023.98px)
+	.about-4
+		.about-4-slide
+			.swiper-slide
+				@apply w-[36rem] #{!important}
+		.indicator-swipe:not(.custom)
+			@apply top-[1rem] right-[1rem]
+@media (max-width: 767.98px)
+	.about-4
+		.about-4-slide
+			@apply px-4
+			.swiper-slide
+				@apply w-full #{!important}
+		.indicator-swipe:not(.custom)
+			@apply top-[21rem]
+		

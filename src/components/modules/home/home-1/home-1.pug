@@ -1,0 +1,32 @@
+section.home-1(class="md:block hidden  relative")
+	.home-1-slide(class="relative")
+		.swiper.swiper-home-banner 
+			.swiper-wrapper 
+				.swiper-slide
+					.home-1-banner(class="relative z-50")
+						a(href="#" class="img-ratio ratio:pt-[960_1920] lozad")
+							img(src="./img/banner-1.png", alt="") 
+						.home-1-content(class="absolute xl:rem:bottom-[260px] lg:bottom-[4.5rem] lg:rem:left-[260px] left-10 rem:w-[685px] top-2/4 -translate-y-2/4 z-30")
+							h1(class="rem:text-[56px] font-bold text-Neutral-Title mb-8") Bộ đồ nhỏ –Yêu thương to
+							.format-content(class="text-2xl font-normal text-Neutral-Body mb-15")
+								p Có mẹ bảo, “mặc rồi mới thấy tiếc… vì không mua combo.” Bé mặc cả ngày, không bị đỏ lưng, không quấy giữa đêm.
+							+ButtonPrimary("Khám phá thêm")
+
+		.wrap-button-slide
+			.btn.btn-prev.btn-sw-1
+			.btn.btn-next.btn-sw-1
+section.home-1-mobile(class="block md:hidden relative")
+	.swiper.swiper-home-banner-mobile 
+		.swiper-wrapper
+			-for(var i = 0; i < 3; i++) 
+				.swiper-slide
+					.home-1-banner-mobile(class="relative") 
+						a(href="#" class="")
+							img(src="./img/1.jpg", alt="") 
+						.home-1-content-mobile(class="absolute h-full flex flex-col justify-end bottom-10 left-10 gap-5")
+							h1(class="text-64 text-Neutral-White") CHAGEE
+							.desc(class="text-2xl font-medium uppercase text-Neutral-White flex items-center justify-between") 
+								h3 
+									| Kết nối với Chagee để cùng lan toả 
+									br
+									| hương vị và giá trị tinh tế.

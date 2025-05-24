@@ -1,0 +1,142 @@
+@layer components
+	.item-comp
+		@apply flex
+	.newletter
+		@apply relative
+		&::before
+			content: ""
+			background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%)
+			@apply absolute top-0  w-full h-full pointer-events-none z-2
+		.newletter-content
+			form
+				.form-group
+					@apply lg:rem:w-[560px] w-full relative
+					input
+						@apply rounded-[40px] bg-Neutral-White border border-Neutral-100
+						@apply w-full px-5 rem:py-[13px] text-Neutral-Title text-lg flex items-center
+						&::placeholder
+							@apply text-Neutral-Title
+					.icon
+						@apply absolute top-2/4 -translate-y-2/4 right-5 
+						i
+							@apply text-lg text-Primary-Red font-normal
+	.btn-add-cart
+		@apply bg-Primary-Silver rounded-1 px-5 rem:py-[10px]
+		@apply border border-Primary-Red inline-flex items-center rem:gap-[10px]
+		@apply text-sm font-semibold text-Primary-Red hover:bg-Primary-Red hover:text-Neutral-White
+		&:hover
+			i
+				@apply text-Neutral-White
+		i
+			@apply text-Primary-Red
+	.button-to-top
+		@apply opacity-0 pointer-events-none
+		&.active
+			@apply opacity-100 pointer-events-auto
+	.button-primary
+		@apply py-3 px-5 rounded-full bg-Primary-Red font-semibold
+		@apply inline-flex items-center gap-1 text-Neutral-White
+		&-white
+			@apply bg-Neutral-White text-Primary-Red
+			&:hover
+				@apply bg-Primary-Red text-Neutral-White
+	.button-secondary
+		@apply text-xl font-bold text-Primary-Red 
+		@apply border-b-4 border-b-Primary-Orange inline-flex hover:text-Primary-Orange 
+		span
+			@apply transition-transform duration-500 ease-in-out
+		.icon
+			@apply transition-transform duration-500 ease-in-out
+		&:hover
+			a
+				@apply -translate-y-1 transition-all ease-in-out duration-500
+			span
+				
+				@apply -translate-y-1 transition-all ease-in-out duration-500
+			.icon
+				@apply -translate-y-1 transition-all ease-in-out duration-500
+	// .form-contact-out-stock 
+	// 	@apply rem:w-[850px]  relative max-md:w-full
+	// 	.carousel__button
+	// 		position: absolute !important
+	// 		top: 0.5rem !important
+	// 		right: 0.5rem !important
+	// 		width: 32px
+	// 		height: 32px
+	// 		background-color: #630814
+	// 		svg
+	// 			@apply rem:w-[16px] rem:h-[16px]
+	// 	form
+	// 		.form-row-submit
+	// 			@apply flex-center relative
+	// 			.wpcf7-spinner
+	// 				@apply absolute right-[300px] top-1/2 -translate-y-1/2 ml-2
+	// 			.button-primary
+	// 				@apply cursor-pointer
+	// 				&:hover
+	// 					@apply bg-Primary-6 text-Neutral-White
+	// 		.form-group
+	// 			label
+	// 				@apply text-Primary-6
+	.indicator-swipe
+		&:not(.custom)
+			@apply absolute top-1/2 -translate-y-1/2  right-15
+		background: rgba(0, 0, 0, 0.40)
+		border: 1px solid rgba(255, 255, 255, 0.40)
+		@apply z-30 w-[calc(104/19.2*1rem)] h-11 rounded-full flex justify-between items-center px-3 pointer-events-none
+		@apply transition-all
+		// &:not(.active)
+		// 	@apply opacity-0
+		svg
+			@apply stroke-white
+		.hand
+			animation: moveSwipeGesture 2.25s infinite ease-in-out
+			@apply md:w-9 md:h-9 w-10 h-10
+	.product-item
+		.content
+			.color
+				ul.color-list 
+					@apply flex items-center gap-2 mb-4
+					li
+						@apply w-6 h-6 inline-flex
+						span
+							@apply w-full h-full inline-flex bg-Primary-Orange rounded-full
+			.content-info 
+				.discount
+					line-height: calc( 16 / 14 )
+				.sell-line 
+					@apply relative w-full rounded-[32px] bg-[#E8F3F9] rem:py-[6px] rem:px-[26px] text-xs pl-5 overflow-visible left-4
+					span
+						letter-spacing: 0.48px
+						@apply relative z-10 text-Neutral-White
+					&::after
+						content: ""
+						position: absolute
+						left: -12px // hoặc -20px tùy bạn muốn tràn ra bao nhiêu
+						top: 51%
+						transform: translateY(-50%)
+						width: 36px
+						height: 43px
+						background-image: url("../img/heart.svg")
+						background-size: contain
+						background-repeat: no-repeat
+						z-index: 0
+
+					&::before
+						content: ""
+						position: absolute
+						left: 0
+						top: 0
+						bottom: 0
+						width: 100px
+						background-image: linear-gradient(226deg, #76AECC 0%, #486F83 99.09%)
+						border-top-left-radius: 32px
+						border-bottom-left-radius: 32px
+						z-index: 0
+	@keyframes moveSwipeGesture
+		0%
+			transform: translateX(-8px)
+		50%
+			transform: translateX(8px)
+		100%
+			transform: translateX(-8px)

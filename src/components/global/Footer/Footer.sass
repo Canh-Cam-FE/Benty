@@ -1,0 +1,62 @@
+.footer
+	.footer-top-list
+		@apply pb-10 border-b-2 border-b-[#6BB7DF]
+		.footer-top-col 
+			.icon
+				i
+					@apply text-32 text-Neutral-Title font-light
+			.info
+				.title
+					line-height: calc( 26 / 18 )
+					@apply rem:text-[18px] font-bold text-Neutral-Title
+				a
+					line-height: calc( 38 / 32 )
+					@apply text-32 font-bold text-Neutral-Title
+	.footer-top-main
+		display: grid
+		grid-template-columns: 3.74fr 2fr 2fr
+		gap: 80px
+		@apply py-10
+		.footer-column
+			h3
+				@apply text-xl font-bold text-Neutral-Title mb-6
+			.format-content 
+				@apply rem:text-[18px] text-Neutral-Title font-normal
+			ul.footer-menu
+				@apply flex flex-col gap-3 
+				li
+					a
+						@apply rem:text-[18px] text-Neutral-Title font-normal hover:text-Primary-Red
+@media (max-width: 1279.98px)
+	.footer
+		.footer-top-list
+			@apply gap-10
+			.footer-top-col 
+				.info
+					a
+						@apply text-[20px]
+@media (max-width: 1023.98px)
+	.footer
+		.footer-top-list
+			@apply grid-cols-3 gap-5
+		.footer-bottom
+			.wrap
+				@apply flex-col
+@media (max-width: 767.98px)
+	.footer
+		.footer-top-list
+			@apply grid-cols-2 gap-3
+			.footer-top-col
+				.wrap
+					@apply flex-col gap-2
+					.info
+						@apply text-center
+						a
+							@apply text-[14px]
+		.footer-top-main
+			@apply grid-cols-1 gap-5
+		.footer-bottom
+			.wrap
+				@apply gap-3
+			.footer-bottom-end 
+				@apply flex-col gap-3

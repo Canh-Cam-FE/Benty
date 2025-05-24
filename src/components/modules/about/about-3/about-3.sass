@@ -1,0 +1,29 @@
+.about-3
+	.about-3-btn
+		a
+			@apply inline-flex items-center gap-2
+	.about-3-main
+		.col-left
+			.image
+				@apply relative
+				&::before
+					content: ""
+					border: 4px dashed  #6493AC
+					transform: rotate(-7.285deg)
+					box-sizing: border-box
+					@apply absolute w-full rem:h-[765px] top-[1.45rem] left-10 pointer-events-none
+					@apply rounded-[32px] opacity-50 
+@media (max-width: 1023.98px)
+	.about-3
+		.about-3-main
+			.col-left
+				.image-child
+					@apply mt-5
+				.image
+					&::before
+						content: none
+@media (max-width: 767.98px)
+	.about-3
+		.about-3-main
+			.col-right
+				@apply mt-10

@@ -1,0 +1,11 @@
+section.home-3(class="section-py bg-bg")
+	.container 
+		.home-3-list(class="grid md:grid-cols-2 grid-cols-1 gap-base")
+			-for(var i = 0; i < 2; i++)
+				.item
+					.image(class="relative")
+						a(href="#" class="img-ratio ratio:pt-[340_680] rounded-2xl")
+							+PugImg() 
+						.content(class="absolute rem:pr-[49px] right-0 top-2/4 -translate-y-2/4 text-center")
+							h2(class="title-48 !text-Neutral-White") Collection
+							h3(class="text-32 font-bold text-Neutral-White") Flat 20% Off

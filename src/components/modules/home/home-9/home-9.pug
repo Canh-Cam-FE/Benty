@@ -1,0 +1,42 @@
+section.home-9(class="bg-bg  section-py")
+	.container
+		.wrap(data-toggle="tabslet") 
+			.heading(class="flex flex-col gap-10 md:gap-0 md:flex-row items-start md:items-center justify-between mb-base")
+				h2(class="title-48") Blogs
+				ul.tabslet-tab
+					li.active
+						a(href="#tab1") Khuyến mãi
+					li
+						a(href="#tab2") Tư vấn quà tết
+					li
+						a(href="#tab2") Kiến thức về bé
+			.tabslet-content.active#tab1
+				.home-9-main(class="flex rem:gap-[120px]")
+					.col-left(class="rem:w-[640px]")
+						.item(class="group")
+							.image
+								a(href="#" class="img-ratio ratio:pt-[360_640] zoom-img rounded-2xl")
+									+PugImg() 
+							.content(class="mt-3 py-2 flex flex-col gap-3")
+								.date(class="text-sm font-normal") 24.01.2025
+								h3(class="font-inter text-2xl text-Neutral-Title font-bold group-hover:text-Primary-Red")
+									a(href="#") Kiến tạo hệ sinh thái mẹ và bé chuẩn mực, an toàn và hiện đại 
+								.format-content 
+									p Phương pháp 'da kề da' giúp mẹ và bé khỏe mạnh ngay sau sinh · Ngay từ những giây phút đầu tiên chào đời, việc thực hiện phương pháp "da kề da
+					.col-right(class="w-[calc(100%-33.333333333333336rem-6.25rem)] flex flex-col gap-8")
+						-for(var i = 0; i < 3; i++)
+							.col-right-wrap(class="flex gap-6 group")
+								.image(class="rem:w-[200px]")
+									a(href="#" class="img-ratio ratio:pt-[133_200] zoom-img rounded-lg") 
+										+PugImg()
+								.content(class="flex-1 flex flex-col gap-2")
+									.date(class="text-sm font-normal") 24.01.2025
+									h3(class="font-inter text-lg text-Neutral-Title font-bold group-hover:text-Primary-Red")
+										a(href="#") Bác sĩ nhi bày cách trị hăm tã, mụn nhọt cho bé
+									.format-content(class="line-clamp-3")
+										p Phương pháp 'da kề da' giúp mẹ và bé khỏe mạnh ngay sau sinh · Ngay từ những giây phút đầu tiên chào đời, việc thực hiện phương ...
+				.home-9-btn(class="flex items-center justify-center mt-base")
+					+ButtonSecondary("Khám phá thêm")
+			.tabslet-content#tab2
+				p ok
+			
