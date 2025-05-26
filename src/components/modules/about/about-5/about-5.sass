@@ -21,9 +21,7 @@
 					@apply text-Primary-Red border-b-Primary-Orange
 				&:hover
 					@apply text-Primary-Red border-b-Primary-Orange
-			&-active
-				.step
-					@apply text-Primary-Red border-b-Primary-Orange
+	
 @media (max-width: 1023.98px)
 	.about-5
 		.content
@@ -38,4 +36,8 @@
 			.swiper-slide
 				@apply ml-0
 				.step
-					@apply border-transparent
+					@apply border-none
+					&.active
+						@apply border-none
+					&:hover
+						@apply pointer-events-none

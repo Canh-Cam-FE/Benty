@@ -16,17 +16,24 @@
 		display: grid
 		grid-template-columns: 3.74fr 2fr 2fr
 		gap: 80px
-		@apply py-10
+		@apply md:py-10 pt-5
 		.footer-column
 			h3
-				@apply text-xl font-bold text-Neutral-Title mb-6
+				@apply text-xl font-bold text-Neutral-Title md:mb-6 mb-3
 			.format-content 
 				@apply rem:text-[18px] text-Neutral-Title font-normal
+				a
+					@apply hover:text-Primary-Red
 			ul.footer-menu
 				@apply flex flex-col gap-3 
 				li
 					a
 						@apply rem:text-[18px] text-Neutral-Title font-normal hover:text-Primary-Red
+	.footer-bottom
+		.footer-bottom-end 
+			.footer-link
+				a
+					@apply hover:text-Primary-Red
 @media (max-width: 1279.98px)
 	.footer
 		.footer-top-list

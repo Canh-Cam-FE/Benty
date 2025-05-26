@@ -1,0 +1,63 @@
+section.cooperation-2(class="pt-10")
+	.container-fluid
+		.cooperation-2-content(class="bg-bg-form section-py rounded-[32px] xl:rem:px-[220px] px-5")
+			.cooperation-2-main(class="flex flex-col md:flex-row md:gap-11 gap-6 items-center")
+				.col-left(class="xl:rem:w-[796px] md:w-2/4 w-full")
+					h2(class="title-48 mb-base !text-Neutral-White") Benty được tạo nên từ một nỗi trăn trở quen thuộc của mẹ
+					.cooperation-2-contact(class="xl:rem:w-[650px] w-full flex rem:gap-x-[102px] lg:gap-y-10 gap-y-3 flex-wrap")
+						.item 
+							.icon 
+								i.fa-light.fa-phone
+							.info 
+								.title Hotline đại lý
+								a(href="#") 0938952806
+						.item 
+							.icon 
+								i.fa-light.fa-envelope
+							.info 
+								.title Email
+								a(href="#") cskh@benty.vn
+						.item 
+							.icon 
+								i.fa-light.fa-phone
+							.info 
+								.title Hotline CSKH
+								a(href="#") 0938952806
+					.cooperation-2-btn 
+						a(href="#" class="cooperation-2-zalo") 
+							.icon(class="rem:w-[32px]")
+								.img(class="img-ratio")
+									+PugImg("./img/zalo.png") 
+							span Hotline đại lí
+						a(href="#" class="cooperation-2-zalo") 
+							.icon(class="rem:w-[32px]")
+								.img(class="img-ratio")
+									+PugImg("./img/zalo.png") 
+							span Hotline đồng phục
+				.col-right(class="xl:w-[calc(100%-41.458333333333336rem-2.29167rem)] md:w-2/4 w-full")
+					.form-box(class="lg:py-15 lg:px-10 p-6 bg-Neutral-White rounded-[32px]")
+						h3(class="text-32 font-bold text-Neutral-Title text-center mb-base") Gửi yêu cầu cho Benty
+						form(action="")
+							.form-list(class="grid grid-cols-1 gap-4")
+								.form-label
+									label(for="") Bạn quan tâm tới hình thức nào *
+									.form-group.select-view
+										select(name="yourSelectName")
+											option(value="") -- Please choose an option --
+											option(value="option1") Option 1
+											option(value="option2") Option 2
+											option(value="option3") Option 3
+								.form-group
+									label(for="")  Họ và tên của bạn *
+									input(type="text" placeholder="First Name")
+								.form-group
+									label(for="") Số điện thoại của bạn *
+									input(type="text" placeholder="Last Name")
+								.form-group(class="")
+									label(for="") Email 
+									input(type="text" placeholder="Phone Number/ Whatsapp Number")
+							.form-submit
+								a(href="#" class="button-secondary group") 
+									span Gửi yêu cầu
+									.icon 
+										i.fa-solid.fa-chevron-down

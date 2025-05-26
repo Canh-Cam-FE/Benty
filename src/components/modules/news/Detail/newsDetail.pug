@@ -1,0 +1,40 @@
++Banner()
+section.news-detail(class="section-py")
+	.container-news(class="xl:rem:w-[1440px] lg:w-full mx-auto md:px-[30px] px-[16px] xl:px-[0]")
+		.news-detail-main(class="flex flex-col lg:flex-row gap-base")
+			.col-left(class="lg:w-8/12 w-full")
+				.position-relative(class="relative")
+					h1(class="text-32") Sự Thật Về Feroglobin B12 Capsules: Có Tốt Không? Giá Bao Nhiêu Và Mua Ở Đâu?
+					.news-item-meta(class="py-4 flex gap-2 border-b border-b-Neutral-200") 
+						.news-item-category(class="text-Primary-Red") Thông tin sức khỏe
+						.news-item-date(class="text-gray-300") 01/10/2024
+					.format-content 
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam itaque reiciendis dolores ducimus rem qui facere nesciunt, voluptatem dolorem libero tempora tenetur modi odit, iure rerum eum dolorum. Neque, molestiae!
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum nostrum iste itaque velit ea veniam, corporis numquam placeat officiis aut magni culpa consectetur esse explicabo quod dignissimos at similique quos!
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam itaque reiciendis dolores ducimus rem qui facere nesciunt, voluptatem dolorem libero tempora tenetur modi odit, iure rerum eum dolorum. Neque, molestiae!
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum nostrum iste itaque velit ea veniam, corporis numquam placeat officiis aut magni culpa consectetur esse explicabo quod dignissimos at similique quos!
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti libero itaque nam autem dignissimos consectetur, necessitatibus voluptas cum ducimus illo nulla saepe eius velit quis quo, officiis facilis perspiciatis quibusdam? Facilis cumque voluptate reprehenderit et incidunt magni atque magnam. Molestias delectus esse accusantium natus rem reiciendis ducimus suscipit quaerat earum atque! Aspernatur vitae qui perspiciatis delectus distinctio expedita provident sapiente hic incidunt consequuntur suscipit animi pariatur quia, iusto veritatis sed velit! Vel a, voluptatum veritatis dicta voluptatibus eos ratione veniam excepturi atque eius quod mollitia, laborum ad asperiores omnis error aut expedita quasi cumque maxime quibusdam qui. Quod, sint optio?
+					.sticky-share-post(class="absolute right-full top-0 mr-5 bottom-0")
+						.detail-share(class="flex lg:flex-col gap-5 sticky top-[calc(var(--header-height)+1.5625rem)]")
+							ul 
+								li 
+									a(href="#") 
+										i.fa-brands.fa-facebook-f
+								li 
+									a(href="#") 
+										i.fa-brands.fa-facebook-f
+								li 
+									a(href="#") 
+										i.fa-brands.fa-facebook-f
+			.col-right(class="lg:w-4/12 w-full")
+				h2(class="title-40 !text-Primary-Red mb-base") Tin tức liên quan
+				.news-detail-list(class="flex flex-col gap-8")
+					-for(var i = 0; i < 5; i++)
+						.news-detail-item(class="group flex gap-5")
+							.news-image(class="lg:rem:w-[168px] w-2/5") 
+								a(href="#" class="img-ratio rounded-2xl ratio:pt-[115_168] zoom-img")
+									+PugImg() 
+							.news-content(class="flex-1")
+								.news-item-meta(class="pb-3 border-b border-b-Neutral-200")
+									.news-item-category(class="text-Primary-Red") Thông tin sức khỏe
+									.news-item-title(class="mt-3 text-Neutral-Title font-bold group-hover:text-Primary-Red") THÔNG TIN CHÍNH HÃNG

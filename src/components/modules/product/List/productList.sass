@@ -1,0 +1,86 @@
+.product-2
+	.col-left
+		@apply flex flex-col gap-5
+
+	.product-wrap
+		ul.product-menu 
+			@apply p-5	flex flex-col gap-3 border border-Primary-Red
+				
+	.product-sidebar
+		ul.product-main
+			@apply border border-Primary-Red  p-4 bg-Neutral-White flex flex-col gap-3
+			li				
+				@apply flex items-center justify-between 
+				a
+					@apply flex   text-Neutral-Body		
+				
+					
+				.product-checkbox
+					background-image: none
+					@apply flex gap-3 font-normal items-center pl-1
+					@apply cursor-pointer transition-all mb-0
+					&:hover
+						@apply text-Primary-Red
+						&::before
+							@apply text-Primary-Red
+					&.checked
+						@apply text-Primary-Red
+						&::before
+							content: '\f14a'
+							@apply text-Primary-Red font-black
+					&::before
+						content: '\f0c8'
+						@apply font-awesome text-Neutral-300 font-light transition-all
+	.product-sidebar
+		.product-list
+			@apply flex items-center justify-between
+			ul.product-main 
+				@apply w-full p-5 border border-Primary-Red flex flex-col gap-3
+				li
+					@apply flex items-center justify-between
+			.product-checkbox
+				background-image: none
+				@apply flex gap-3 font-normal items-center pl-1
+				@apply cursor-pointer transition-all mb-0 
+				span
+					@apply text-Neutral-Body
+				&:hover
+					@apply text-Neutral-White
+					&::before
+						@apply text-Primary-Red
+				&.checked
+					@apply text-Primary-Red
+					&::before
+						content: '\f14a'
+						@apply text-Primary-Red font-black
+				&::before
+					content: '\f0c8'
+					@apply font-awesome text-Neutral-300 font-light transition-all
+		.product-color
+			span
+				@apply bg-[#DFD6C9] rem:w-[26px] rem:h-[26px] block
+	.col-right
+		.product-right-heading
+			@apply mb-base
+			.product-right-select
+				@apply flex items-center gap-base
+				.select-view
+					@apply flex items-center gap-3 relative
+					&::before
+						content: "\f078"
+						@apply font-awesome right-3 absolute text-Neutral-400
+					label
+						@apply text-xl font-normal text-Neutral-Title
+					select
+						appearance: none
+						-webkit-appearance: none
+						-moz-appearance: none
+						@apply border border-Primary-Red rounded-full py-2 px-6 w-full cursor-pointer
+@media (max-width: 1023.98px)
+	.product-2
+		.product-sidebar
+			.product-item-heading
+				@apply flex items-center justify-between
+				&::after
+					content: "\f078"
+					@apply font-awesome

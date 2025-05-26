@@ -1,0 +1,45 @@
+.cooperation-4
+	background: linear-gradient(0deg, #ECF8FF 0%, rgba(236, 248, 255, 0.00) 100%)
+	.cooperation-4-slide
+		.swiper
+			@apply px-15 relative w-full
+			.progress-line
+				@apply left-2/4  -translate-x-2/4 top-[34%]  -translate-y-2/4 rem:w-[960px] bg-Neutral-100 h-[2px] -z-1 absolute
+			.progress-inner
+				height: 100%
+				width: 0
+				transition: width 0.5s ease
+				@apply bg-Primary-Red
+		.step
+			@apply flex flex-col gap-8 items-center justify-center
+			.number
+				border: 1px dashed  #6493AC
+				letter-spacing: -1.6px
+				line-height: calc( 52 / 40 )
+				@apply rem:h-[120px] rem:w-[120px] rounded-full shadow-Dropshadow-Light
+				@apply transition-all ease-in-out duration-500 cursor-pointer bg-Neutral-White
+				@apply text-5xl inline-flex items-center justify-center font-black text-Primary-Red
+				&.active
+					@apply bg-Primary-Red text-white
+				&:hover
+					@apply bg-Primary-Red text-white
+			.content
+				h3
+					line-height: calc( 32 / 24 )
+					@apply whitespace-nowrap text-2xl font-normal
+@media (max-width: 1023.98px)
+	.cooperation-4	
+		.cooperation-4-slide
+			.swiper
+				@apply px-0
+				.progress-line
+					@apply hidden
+@media (max-width: 767.98px)
+	.cooperation-4	
+		.cooperation-4-content-step
+			.col-right
+				.swiper
+					.title-content
+						@apply mb-2
+
+

@@ -76,14 +76,15 @@ module.exports = {
 		fontSize: {
 			0: ["0", { lineHeight: "0" }],
 			xs: ["clamp(10px,calc(12/1920*100rem),calc(12/1920*100rem))", , { lineHeight: "1.2" }],
-			sm: ["clamp(14px,calc(14/1920*100rem),calc(14/1920*100rem))", , { lineHeight: "1.2" }],
+			sm: ["calc(14/1920*100rem)", , { lineHeight: "1.2" }],
 			base: ["clamp(14px,calc(16/1920*100rem),calc(16/1920*100rem))", , { lineHeight: "1.2" }],
 			"15px": ["clamp(15px,calc(15/1920*100rem),calc(15/1920*100rem))", , { lineHeight: "1.2" }],
 			lg: ["calc(18/1920*100rem)", , { lineHeight: "1.2" }],
 			xl: ["calc(20/1920*100rem)", , { lineHeight: "1.2" }],
-			"2xl": ["clamp(18px,calc(24/1920*100rem),calc(24/1920*100rem))"],
+			"2xl": ["calc(24/1920*100rem)"],
 			"3xl": ["calc(30/1920*100rem)"],
 			"4xl": ["calc(36/1920*100rem)"],
+
 			"5xl": ["calc(40/1920*100rem)"],
 			"6xl": ["calc(48/1920*100rem)"],
 			"7xl": ["calc(72/1920*100rem)", { lineHeight: "1" }],
@@ -216,6 +217,7 @@ module.exports = {
 			colors: {
 				transparent: "transparent",
 				bg: "#F4FBFF",
+				"bg-form": "#F75600",
 				Primary: {
 					Red: "#6493ac",
 					Silver: "#f3fbff",

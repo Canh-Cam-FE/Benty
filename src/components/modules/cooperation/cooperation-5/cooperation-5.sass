@@ -1,0 +1,58 @@
+.cooperation-5
+	background: linear-gradient(0deg, #ECF8FF 0%, rgba(236, 248, 255, 0.00) 100%)
+	.box-content
+		box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.06)
+.fancybox__content :focus:not(.carousel__button.is-close)
+	@apply outline-none #{!important}
+#popup-product-detail
+	@apply lg:rem:w-[1000px] md:w-[48rem] w-full px-4 pt-0 lg:p-0  bg-transparent
+	.popup-content
+		@apply w-full overflow-hidden
+		.col-left
+			@apply rounded-3xl hidden md:block
+			&:focus
+				@apply outline-none #{!important}
+			.image
+				@apply rounded-3xl
+				&:focus
+					@apply outline-none #{!important}
+				a
+					img
+						@apply block
+		.scroll-wrapper
+			@apply rem:h-[340px] overflow-y-auto pr-10
+			&::-webkit-scrollbar
+				@apply w-[calc(8/1920*100rem)] rounded-lg
+			&::-webkit-scrollbar-track
+				@apply bg-[#d9d9d9] rounded-lg
+			&::-webkit-scrollbar-thumb
+				@apply bg-Primary-Red rounded-lg
+		.popup-gallary
+			.left
+				.image
+					a
+						img
+							@apply max-w-full object-cover w-full h-full
+
+	.carousel__button
+		position: absolute !important
+		top: 0.5rem !important
+		right: 0.5rem !important
+		width: 32px
+		height: 32px
+		i
+			@apply text-32 text-Neutral-White
+@media (max-width: 767.98px)
+	#popup-product-detail
+		.popup-content
+			.popup-gallary
+				@apply p-6
+				.popup-gallary-list 
+					@apply grid-cols-1
+					.image
+						@apply h-full
+						a
+							@apply h-full pt-0
+		.carousel__button
+			@apply right-[1.5rem] #{!important}
+							

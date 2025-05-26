@@ -1,0 +1,53 @@
+#popup-technology
+	@apply lg:rem:w-[1000px] md:w-[48rem] w-full px-4 pt-0 lg:p-0  bg-transparent
+	.popup-content
+		@apply w-full overflow-hidden
+		.col-left
+			.item-tab
+				@apply bg-Neutral-White transition-all ease-in-out duration-300 cursor-pointer
+				&.active
+					@apply bg-Primary-Silver transition-all ease-in-out duration-300 cursor-pointer
+					span
+						@apply text-Primary-Red
+				&:hover
+					@apply bg-Primary-Silver
+				span
+					@apply text-lg font-bold text-Neutral-Title
+			&:focus
+				@apply outline-none #{!important}
+			.image
+				@apply rounded-3xl
+				&:focus
+					@apply outline-none #{!important}
+				a
+					img
+						@apply block
+		.col-right
+			.content-tab
+				@apply hidden
+			.format-content
+				@apply lg:gap-5 gap-3
+				img
+					@apply w-full h-full object-cover rounded-3xl
+		.scroll-wrapper
+			@apply rem:h-[666px] overflow-y-auto 
+			&::-webkit-scrollbar
+				@apply w-[calc(8/1920*100rem)] rounded-lg
+			&::-webkit-scrollbar-track
+				@apply bg-[#d9d9d9] rounded-lg
+			&::-webkit-scrollbar-thumb
+				@apply bg-Primary-Red rounded-lg
+			
+
+	.carousel__button
+		position: absolute !important
+		top: 1.2rem !important
+		right: 0.5rem !important
+		width: 32px
+		height: 32px
+		i
+			@apply text-32 text-Neutral-White
+@media (max-width: 767.98px)
+	#popup-technology
+		.carousel__button
+			@apply right-[1.5rem] #{!important}

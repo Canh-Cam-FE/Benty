@@ -1,0 +1,59 @@
+.cooperation-2
+	.cooperation-2-main
+		.cooperation-2-contact
+			.item
+				@apply flex items-center gap-6
+				.icon
+					@apply text-32 text-Neutral-White 
+				.info
+					.title
+						line-height: calc( 26 / 18 )
+						@apply text-lg font-normal opacity-70 text-Neutral-White
+					a
+						line-height: calc( 38 / 32 )
+						@apply text-Neutral-White font-bold lg:text-32 text-2xl
+		.col-left
+			.cooperation-2-btn 
+				@apply flex flex-col lg:flex-row items-center gap-5 mt-base
+				.cooperation-2-zalo					
+					@apply bg-Neutral-White py-1 px-4 inline-flex gap-3 items-center justify-center
+					@apply text-xl font-bold text-Neutral-Title rem:rounded-[50px] rem:h-[52px] 
+		.col-right
+			.form-list
+				.form-label
+					@apply flex flex-col gap-2
+				.form-group
+					@apply w-full flex flex-col gap-2
+					label
+						@apply font-semibold text-Neutral-Body 
+					input,select
+						@apply w-full py-2 px-4 rounded-[40px] bg-Neutral-White h-full xl:rem:h-[52px]
+						@apply border border-Neutral-100 text-sm font-normal text-Neutral-400		
+						&:focus
+							@apply outline-none #{!important}
+						&::placeholder
+							@apply text-lg font-normal text-Neutral-400
+
+				.select-view
+					@apply gap-3 relative text-Neutral-400
+					&::before
+						content: "\f078"
+						@apply font-awesome right-3 absolute text-Neutral-400 text-lg top-2/4 -translate-y-2/4
+					label
+						@apply text-xl font-normal text-Neutral-Body
+					select
+						appearance: none
+						-webkit-appearance: none
+						-moz-appearance: none
+						@apply border border-Neutral-200  py-2 px-4 w-full cursor-pointer text-lg
+			.form-submit
+				@apply mt-base flex items-center justify-center
+				a
+					@apply inline-flex items-center gap-3
+@media (max-width: 1023.98px)
+	.cooperation-2
+		.cooperation-2-main
+			.col-left
+				.cooperation-2-btn 
+					.cooperation-2-zalo					
+						@apply w-full

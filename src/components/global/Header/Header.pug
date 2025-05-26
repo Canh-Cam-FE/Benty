@@ -20,17 +20,22 @@ header.header
 		.header-menu(class="flex items-center justify-between h-full")
 			ul.header-nav 
 				li 
-					a(href="#") TRANG CHỦ 
+					a(href="./home.html") TRANG CHỦ 
 				li 
 					a(href="./about.html") MẸ ƠI, BENTY LÀ...
+				li.menu-item-has-children
+					a(href="./productList.html") SẢN PHẨM
+					ul.sub-menu 
+						li 
+							a(href="#") Chuyện người ở CHAGEE
+						li 
+							a(href="#")  Cuộc sống ở CHAGEE
 				li 
-					a(href="#") SẢN PHẨM
-				li 
-					a(href="#") HỢP TÁC CÙNG BENTY
+					a(href="./cooperation.html") HỢP TÁC CÙNG BENTY
 				li 
 					a(href="#") HỖ TRỢ KHÁCH HÀNG
 				li 
-					a(href="#") TIN TỨC
+					a(href="./newsList.html") TIN TỨC
 		.header-right(class="flex items-center gap-8")
 			.header-search 
 				img.search-default(src="./img/Search-white.svg", alt="")
@@ -66,11 +71,16 @@ header.header
 	.nav-links#mobileMenu
 		ul(class="")
 			li 
-				a(href="#") Mẹ ơi, Benty là...
-			li 
+				a(href="./about.html") Mẹ ơi, Benty là...
+			li.menu-item-has-children
 				a(href="#") Sản phẩm
+				ul.sub-menu 
+					li 
+						a(href="#") Chuyện người ở CHAGEE
+					li 
+						a(href="#")  Cuộc sống ở CHAGEE
 			li 
-				a(href="#") Hợp tác cùng Benty
+				a(href="./cooperation.html") Hợp tác cùng Benty
 			li 
 				a(href="#") Hỗ trợ khách hàng
 			li 

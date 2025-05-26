@@ -1,6 +1,23 @@
 @layer components
 	.item-comp
 		@apply flex
+	.pagination
+		ul.page-numbers
+			@apply flex items-center justify-center gap-6
+			li
+				a
+					letter-spacing: -0.36px
+					@apply w-12 h-12 inline-flex items-center justify-center bg-Neutral-100
+					@apply text-lg font-bold text-Neutral-Title hover:bg-Primary-Red hover:text-Neutral-White rounded-full
+					&.active
+						@apply bg-Primary-Red text-Neutral-White
+	.banner
+		.banner-content
+			@apply absolute rem:bottom-[150px] rem:px-[260px] 
+			h2
+				line-height: calc( 80 / 56 )
+			h3
+				line-height: calc( 52 / 40 )
 	.newletter
 		@apply relative
 		&::before
@@ -38,8 +55,6 @@
 		@apply inline-flex items-center gap-1 text-Neutral-White
 		&-white
 			@apply bg-Neutral-White text-Primary-Red
-			&:hover
-				@apply bg-Primary-Red text-Neutral-White
 	.button-secondary
 		@apply text-xl font-bold text-Primary-Red 
 		@apply border-b-4 border-b-Primary-Orange inline-flex hover:text-Primary-Orange 
@@ -133,6 +148,59 @@
 						border-top-left-radius: 32px
 						border-bottom-left-radius: 32px
 						z-index: 0
+	.home-9
+		.heading
+			ul.tabslet-tab
+				@apply flex items-center gap-3 flex-wrap
+				li
+					@apply rem:py-[10px] px-4 rounded-1 text-Neutral-Body font-normal
+					@apply bg-transparent border border-Neutral-Body inline-flex font-primary2
+					&.active
+						@apply bg-Primary-Red text-Neutral-White border-transparent
+					&:hover
+						@apply bg-Primary-Red text-Neutral-White border-transparent
+	.customer
+		.customer-main
+			@apply items-start
+		.col-right
+			@apply text-lg gap-3
+			.wrap-item-toggle
+				.item-toggle
+					@apply rounded-lg
+					&.active
+						.content
+							@apply pt-5
+						.title
+							span,.number
+								@apply text-Primary-Red
+					.title
+						&.active 
+							@apply pb-3 border-b border-b-Neutral-300 text-Primary-Red
+							
+							.number
+								@apply text-Primary-Red
+							i
+								&::before
+									content: "\2b"
+									@apply  font-awesome
+				.content
+					@apply pt-3
+		.col-left
+			.heading
+				@apply rounded-tl-lg rounded-tr-lg
+			
+			ul.customer-menu
+				@apply rounded-bl-lg rounded-br-lg px-5 bg-Neutral-White shadow-Dropshadow-Light
+				li
+					a
+						@apply text-lg py-4 block border-b border-b-Neutral-200
+						@apply hover:text-Primary-Red
+					&:last-child
+						a
+							@apply border-none
+					&[class*='current']
+						&>a
+							@apply text-Primary-Red
 	@keyframes moveSwipeGesture
 		0%
 			transform: translateX(-8px)
@@ -140,3 +208,26 @@
 			transform: translateX(8px)
 		100%
 			transform: translateX(-8px)
+	@media (max-width: 1279.98px)
+		.banner
+			.banner-content
+				@apply bottom-15 px-20
+	@media (max-width: 1023.98px)
+		.banner
+			.banner-content
+				@apply hidden
+		.home-9
+			.home-9-main
+				@apply gap-10 flex-col
+				.col-left
+					@apply w-full
+				.col-right
+					@apply w-full
+	@media (max-width: 767.98px)
+		.home-9
+			.heading
+				ul.tabslet-tab
+					@apply flex-nowrap whitespace-nowrap w-full overflow-x-auto
+		.customer
+			.col-left
+				@apply static

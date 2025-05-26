@@ -1,0 +1,54 @@
+section.cooperation-5(class="section-py")
+	.container 
+		.box-content(class="bg-Neutral-White rounded-[32px] lg:p-10 p-5")
+			h2(class="title-48 text-center mb-6") Các sản phẩm của Benty-Print in theo yêu cầu 
+			.cooperation-5-list(class="grid lg:grid-cols-4 grid-cols-2 lg:gap-base gap-3")
+				-for(var i = 0; i < 8; i++)
+					.product-item(class="group") 
+						.image 
+							a(href="#popup-product-detail" class="img-ratio ratio:pt-[360_320] zoom-img rounded-2xl border border-Neutral-100 group-hover:border-Primary-Red" data-fancybox)
+								+PugImg("./img/product.png") 
+						.content(class="text-center mt-4")
+							h3(class="text-2xl font-normal group-hover:text-Primary-Red") 
+								a(href="#") Bộ ba lỗ
+#popup-product-detail.popup-product-detail(style="display: none;" data-fancybox-modal)
+	.popup-content 
+		.popup-main(class="flex flex-col md:flex-row gap-base lg:p-10 p-6 bg-Primary-Red rounded-tr-3xl rounded-tl-3xl")
+			.col-left(class="md:rem:w-[280px] w-full")
+				.image 
+					a(href="#" class="img-ratio ratio:pt-[315_280] zoom-img rounded-3xl")
+						+PugImg("./img/product-detail.png") 
+			.col-right(class="md:w-[calc(100%-14.583333333333334rem-2.08333rem)] w-full")
+				h3(class="text-32 font-bold text-Neutral-White mb-7") Bộ ba lỗ
+				.color(class="text-lg font-normal text-Neutral-White mb-5") Màu sắc/thiết kế: Theo yêu cầu
+				.format-content(class="text-Neutral-White text-lg")
+					p Mô tả: CoolxPrint sản xuất túi vải canvas dày dặn, đường may chắc chắn, sử dụng để đồ cá nhân, máy tính. Với chiếc túi tote này, bạn hoàn toàn có thể tự tin lựa chọn làm phụ kiện để đi học, đi chơi, du lịch, công tác, …
+				.wrap-btn(class="flex items-center gap-5 mt-base")
+					a(href="#" class="button-primary button-primary-white")
+						span Gửi yêu cầu
+						i.fa-regular.fa-chevron-right
+		.popup-gallary(class="bg-Neutral-White py-10 pl-10 rounded-bl-3xl rounded-br-3xl")
+			.scroll-wrapper
+				-for(var i = 0; i < 2; i++)
+					.popup-gallary-list(class="grid grid-cols-2 gap-5")
+						.column(class="flex gap-5")
+							.left(class="w-2/4")
+								.image 
+									a(href="#" class="rounded-3xl")
+										+PugImg("./img/gallary-1.png") 
+							.right(class="w-2/4")
+								.image 
+									a(href="#" class="rounded-3xl img-ratio")
+										+PugImg("./img/5.png") 
+						.column(class="flex gap-5")
+							.left(class="w-2/4 flex flex-col gap-5")
+								.image
+									a(href="#" class="rounded-3xl")
+										+PugImg("./img/gallary-2.png") 
+								.image
+									a(href="#" class="rounded-3xl img-ratio")
+										+PugImg("./img/gallary-3.png") 
+							.right(class="w-2/4")
+								.image
+									a(href="#" class="rounded-3xl img-ratio")
+										+PugImg("./img/gallary-3.png") 

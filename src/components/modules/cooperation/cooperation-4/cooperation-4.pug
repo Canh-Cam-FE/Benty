@@ -1,0 +1,91 @@
+section.cooperation-4(class="section-py")
+	.container 
+		h2(class="title-48 text-center mb-base") Quy trình hoạt động của Benty như thế nào?
+		.cooperation-4-slide(class="lg:rem:w-[1240px] w-full mx-auto relative")
+			.swiper
+				.swiper-wrapper 
+					.swiper-slide
+						.step(data-id="1") 
+							.number.active 1
+							.content 
+								h3 Tiếp nhận yêu cầu
+					.swiper-slide
+						.step(data-id="2") 
+							.number 2
+							.content 
+								h3 Tư vấn & chốt mẫu
+					.swiper-slide
+						.step(data-id="3")
+							.number 3
+							.content 
+								h3 Báo giá minh bạch
+					.swiper-slide
+						.step(data-id="4")
+							.number 4
+							.content 
+								h3 Sản xuất & kiểm hàng
+					.swiper-slide
+						.step(data-id="5")
+							.number 5
+							.content 
+								h3 Giao hàng & cảm ơn								
+				.progress-line
+					.progress-inner
+			
+		.cooperation-4-content-step(class="bg-Neutral-White shadow-Dropshadow-Light rounded-[32px] py-6 px-6 mt-base xl:-mx-15 mx-0")
+			.wrap(class="flex flex-col-reverse lg:flex-row items-center xl:gap-20 gap-10")
+				.col-left(class="xl:rem:w-[660px] lg:w-2/4 w-full")
+					.image(data-id="1") 
+						a(href="#" class="img-ratio ratio:pt-[371_660] rounded-[32px]") 
+							+PugImg()
+					.image(data-id="2") 
+						a(href="#" class="img-ratio ratio:pt-[371_660] rounded-[32px]") 
+							+PugImg("https://picsum.photos/1600/900?random=1")
+					.image(data-id="3") 
+						a(href="#" class="img-ratio ratio:pt-[371_660] rounded-[32px]") 
+							+PugImg("https://picsum.photos/1600/900?random=2")
+					.image(data-id="4") 
+						a(href="#" class="img-ratio ratio:pt-[371_660] rounded-[32px]") 
+							+PugImg()
+					.image(data-id="5") 
+						a(href="#" class="img-ratio ratio:pt-[371_660] rounded-[32px]") 
+							+PugImg("https://picsum.photos/1600/900?random=3")
+				.col-right(class="xl:w-[calc(100%-34.375rem-4.16667rem)] lg:w-2/4 w-full")
+					.cooperation-4-wrap(class="relative")
+						.swiper 
+							.swiper-wrapper 
+								.swiper-slide(data-id="1") 
+									.item(class="rem:pr-[77px]")
+										.title(class="text-2xl text-Primary-Orange font-bold mb-4") Bước 1
+										.title-content(class="title-40 !font-light rem:mb-[22px]") Tiếp nhận yêu cầu
+										.format-content 	
+											p Dựa theo yêu cầu của bạn, Benty lên thiết kế phối màu – logo – kiểu dáng để bạn duyệt mẫu trước.
+								.swiper-slide(data-id="2")  
+									.item(class="rem:pr-[77px]")
+										.title(class="text-2xl text-Primary-Orange font-bold mb-4") Bước 2
+										.title-content(class="title-40 !font-light rem:mb-[22px]") Tiếp nhận yêu cầu
+										.format-content 	
+											p Dựa theo yêu cầu của bạn, Benty lên thiết kế phối màu – logo – kiểu dáng để bạn duyệt mẫu trước.
+								.swiper-slide(data-id="3")  
+									.item(class="rem:pr-[77px]")
+										.title(class="text-2xl text-Primary-Orange font-bold mb-4") Bước 3
+										.title-content(class="title-40 !font-light rem:mb-[22px]") Tiếp nhận yêu cầu
+										.format-content 	
+											p Dựa theo yêu cầu của bạn, Benty lên thiết kế phối màu – logo – kiểu dáng để bạn duyệt mẫu trước.
+								.swiper-slide(data-id="4")  
+									.item(class="rem:pr-[77px]")
+										.title(class="text-2xl text-Primary-Orange font-bold mb-4") Bước 4
+										.title-content(class="title-40 !font-light rem:mb-[22px]") Tiếp nhận yêu cầu
+										.format-content 	
+											p Dựa theo yêu cầu của bạn, Benty lên thiết kế phối màu – logo – kiểu dáng để bạn duyệt mẫu trước.
+								.swiper-slide(data-id="5")  
+									.item(class="rem:pr-[77px]")
+										.title(class="text-2xl text-Primary-Orange font-bold mb-4") Bước 5
+										.title-content(class="title-40 !font-light rem:mb-[22px]") Tiếp nhận yêu cầu
+										.format-content 	
+											p Dựa theo yêu cầu của bạn, Benty lên thiết kế phối màu – logo – kiểu dáng để bạn duyệt mẫu trước.
+						.arrow-button(class="lg:mt-20 mt-10 flex items-center gap-4")
+							.btn.btn-prev.btn-sw-1
+							.btn.btn-next.btn-sw-1
+		.wrap-center(class="flex-center mt-base")
+			+ButtonPrimary("Gửi yêu cầu")

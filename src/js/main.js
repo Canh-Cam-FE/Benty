@@ -4,6 +4,7 @@ import {
 	setBackgroundElement,
 	detectCloseElement,
 	buttonToTop,
+	ToggleItem,
 	clickScrollToDiv,
 	appendCaptchaASP,
 	countUpInit,
@@ -18,6 +19,16 @@ $(document).ready(function () {
 	buttonToTop();
 	indicatorSlide();
 	countUpInit();
+	toggleCheckbox();
+	ToggleItem();
+
+	//Product list
+	$(".product-item-heading").on("click", function () {
+		if (window.innerWidth <= 1023) {
+			$(this).next(".product-main").slideToggle();
+			$(this).find(".icon i").toggleClass("fa-chevron-up fa-chevron-down");
+		}
+	});
 
 	const cta = document.querySelector(".tool-fixed-cta");
 	const toolBtn = cta.querySelector(".tool");
@@ -60,6 +71,54 @@ $(document).ready(function () {
 	});
 });
 
+export function toggleCheckbox() {
+	document.querySelectorAll(".product-checkbox").forEach((checkbox) => {
+		// Đảm bảo checkbox không có class "checked" khi mới load
+		checkbox.classList.remove("checked");
+
+		// Thêm sự kiện click để toggle class "checked"
+		checkbox.addEventListener("click", function () {
+			this.classList.toggle("checked");
+		});
+	});
+}
+
+function initTechnologyTabs() {
+	const tabItems = document.querySelectorAll(".popup-technology .item-tab");
+	const contentTabs = document.querySelectorAll(".popup-technology .content-tab");
+
+	// Mặc định hiển thị tab đầu tiên và active tab đầu tiên
+	const firstContent = document.querySelector('.popup-technology .content-tab[data-id="1"]');
+	const firstTab = document.querySelector('.popup-technology .item-tab[data-id="1"]');
+	if (firstContent) firstContent.style.display = "block";
+	if (firstTab) firstTab.classList.add("active");
+
+	tabItems.forEach((item) => {
+		item.addEventListener("click", () => {
+			const id = item.getAttribute("data-id");
+
+			// Bỏ class active khỏi tất cả tab
+			tabItems.forEach((tab) => tab.classList.remove("active"));
+
+			// Thêm class active vào tab được click
+			item.classList.add("active");
+
+			// Ẩn tất cả content-tab
+			contentTabs.forEach((content) => {
+				content.style.display = "none";
+			});
+
+			// Hiện content-tab tương ứng
+			const activeContent = document.querySelector(
+				`.popup-technology .content-tab[data-id="${id}"]`
+			);
+			if (activeContent) {
+				activeContent.style.display = "block";
+			}
+		});
+	});
+}
+
 export function indicatorSlide() {
 	if ($(".indicator-swipe").length > 0) {
 		var callback = function (entries) {
@@ -89,6 +148,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		template: {
 			closeButton:
 				'<button class="fancybox-button fancybox-button--close" title="Close"><i class="fa-duotone fa-solid fa-xmark"></i></button>',
+		},
+		on: {
+			done: () => {
+				initTechnologyTabs(); // khởi động sau khi popup hiện ra
+			},
 		},
 	});
 });

@@ -4,9 +4,10 @@
 			.number
 				-webkit-text-stroke-width: 2px
 				-webkit-text-stroke-color: #fff
+				-webkit-text-stroke: none !important
 				line-height: calc( 52 / 64 )
-				fill: none
-				@apply rem:text-[64px] font-black text-transparent mb-8
+				@apply rem:text-[64px] font-black text-transparent mb-8 hover:text-Neutral-White
+				@apply transition-all ease-in-out duration-300 cursor-pointer
 			h3
 				line-height: calc( 32 / 24 )
 				@apply text-2xl font-bold text-Neutral-White

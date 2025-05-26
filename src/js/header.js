@@ -18,7 +18,8 @@ export const header = {
 		}
 
 		if ($("body").hasClass("home")) {
-			if (scrollTop > height) {
+			// Scroll lớn hơn 400px mới active
+			if (scrollTop > 600) {
 				$("header").addClass("active");
 			} else {
 				$("header").removeClass("active");
@@ -39,10 +40,10 @@ export const header = {
 		});
 
 		$(
-			".header-nav-mobile .sub-menu, .header-nav-mobile .sub-menu-children, .header-nav-mobile .sub-menu-children-dropdown"
+			".nav-links .sub-menu, .nav-links .sub-menu-children, .nav-links .sub-menu-children-dropdown"
 		).hide();
 
-		$('.header-nav-mobile li[class*="menu-item-has-children"] > a').on("click", function (e) {
+		$('.nav-links li[class*="menu-item-has-children"] > a').on("click", function (e) {
 			e.preventDefault();
 
 			$(this)

@@ -1,0 +1,43 @@
+.contact
+	@apply relative z-10
+	.contact-item
+		@apply flex gap-4
+		.content
+			a
+				@apply text-Neutral-Title text-lg hover:text-Primary-Red
+	.map
+		iframe
+			@apply w-full rem:h-[336px]
+	.col-left
+		h2
+			@apply text-left text-Primary-Red #{!important}
+		.contact-item
+			.bottom
+				a
+					@apply hover:text-Primary-Red
+
+	.col-right
+		.contact-form
+			@apply grid md:grid-cols-2 grid-cols-1 gap-5
+			.bottom
+				.button-primary
+					@apply flex items-center gap-2
+			.contact-form-field
+				input 
+					@apply w-full py-3 px-6 bg-Neutral-White border border-Neutral-100 rounded-full
+			.form-textarea 
+				@apply rem:h-[156px] col-span-full
+				textarea
+					@apply  w-full py-3 px-6 bg-Neutral-White border border-Neutral-100  h-full rounded-lg
+			.form-btn				
+				button
+					@apply transition-all ease-in-out
+			.bottom
+				@apply col-span-2
+@media (max-width: 767.98px)
+	.contact
+		.col-right
+			.contact-form
+				.contact-form-field
+					@apply col-span-2
+				

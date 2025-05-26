@@ -1,0 +1,51 @@
+.product-detail
+	.format-content
+		
+		@apply text-lg text-Neutral-Title font-normal
+	.product-slide-thumbs
+		.swiper-slide
+			.img
+				@apply  border-2 border-transparent transition-all ease-in-out cursor-pointer
+			&.swiper-slide-thumb-active
+				.img
+					@apply border-Primary-Red
+	
+		.btn
+			&.btn-sw-1
+				&.btn-prev
+					&::before
+						content: '\f106'
+				&.btn-next
+					&::before
+						content: '\f107'
+						@apply font-awesome
+
+.product-detail-tab
+	ul.product-detail-list
+		@apply grid grid-cols-3 md:gap-8 gap-2 lg:rem:px-[260px] md:px-[40px] px-0
+		li
+			@apply text-center md:rem:py-[10px] md:px-5 p-2 transition-all ease-in-out
+			@apply border-b border-b-transparent hover:border-b-Primary-Red
+			a
+				
+				@apply text-xl font-bold text-Neutral-Title hover:text-Primary-Red
+				
+			&.active
+				@apply border-b border-b-Primary-Red
+				a
+					@apply text-Primary-Red
+	.product-detail-tab-content
+		@apply overflow-x-auto
+
+		
+		
+.product-detail-2
+	.wrap-button-slide
+		.btn-prev 
+			@apply left-[-4.5rem]
+		.btn-next 
+			@apply right-[-4.5rem]
+@media (max-width: 1023.98px)
+	.product-slide-thumbs
+		.btn.btn-sw-1
+			@apply hidden

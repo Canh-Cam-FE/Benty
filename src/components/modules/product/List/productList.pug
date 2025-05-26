@@ -1,0 +1,91 @@
++Banner()
+
+section.product-2(class="section-py")
+	.container 
+		.product-wrap(class="flex flex-col lg:flex-row gap-6")
+			.col-left(class="lg:rem:w-[250px] w-full")
+				
+				.product-sidebar(class="flex items-center  gap-3 w-full")
+					.product-item(class="cursor-pointer w-full") 
+						.product-item-heading(class="flex items-center justify-between py-2 px-6 bg-Primary-Red text-Neutral-White rounded-tr-1 rounded-tl-1") 							
+							.title(class="text-xl") Danh sách sản phẩm
+						ul.product-main 														
+							li 
+								.product-list
+									.product-checkbox.checked
+										span.product-display-value 17.2							
+							li 
+								.product-list
+									.product-checkbox.checked
+										span.product-display-value 17.2									
+							li 
+								.product-list
+									.product-checkbox.checked
+										span.product-display-value 17.2
+				.product-sidebar
+					.product-item-heading(class="flex items-center justify-between py-2 px-6 bg-Primary-Red text-Neutral-White rounded-tr-1 rounded-tl-1") 							
+						.title(class="text-xl") Màu sắc
+					ul.product-main 
+						li 
+							.product-checkbox.checked
+								span.product-display-value Beige
+							.product-color 
+								span
+						li 
+							.product-checkbox.checked
+								span.product-display-value Beige
+							.product-color 
+								span
+						li 
+							.product-checkbox.checked
+								span.product-display-value Beige
+							.product-color 
+								span
+				.product-sidebar(class="flex items-center  gap-3 w-full")
+					.product-item(class="cursor-pointer w-full") 
+						.product-item-heading(class="flex items-center justify-between py-2 px-6 bg-Primary-Red text-Neutral-White rounded-tr-1 rounded-tl-1") 							
+							.title(class="text-xl") Danh mục sản phẩm
+						ul.product-main 														
+							li 
+								a(href="#") Danh mục 1
+							li 
+								a(href="#") Danh mục 2
+							li 
+								a(href="#") Danh mục 3
+
+							
+			.col-right(class="lg:w-[calc(100%-13.020833333333334rem-1.25rem)] w-full")
+				.product-right-heading(class="flex items-center justify-between flex-wrap")
+					h2(class="title-48") Sản phẩm
+					.product-right-select
+						.select-view 
+							label(for="view") View
+							.select-view-item(class="relative rem:w-[85px]")
+								select#view(name="view") 
+									option(value="12") 12 
+									option(value="12") 24
+									option(value="12") 36 
+									option(value="12") 48 
+								.icon(class="absolute right-6 top-2/4 -translate-y-2/4 cursor-pointer pointer-events-none text-Primary-1") 
+									i.fa-regular.fa-chevron-down
+						.select-view 
+							label(for="sort") Sort
+							.select-view-item(class="relative rem:w-[140px]")
+								select#view(name="sort") 
+									option(value="A - Z") A - Z 
+									option(value="12") 24
+									option(value="12") 36 
+									option(value="12") 48 
+								.icon(class="absolute right-6 top-2/4 -translate-y-2/4 cursor-pointer pointer-events-none text-Primary-1") 
+									i.fa-regular.fa-chevron-down
+				.col-right-product-list(class="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 xl:gap-5 gap-3 lg:mt-0")
+					-for(var i = 0; i < 9; i++)
+						+ProductItem()
+				.pagination(class="mt-base")
+					ul.page-numbers
+						li 
+							a.active(href="#") 1 
+						li 
+							a(href="#") 2
+						li 
+							a(href="#") 3

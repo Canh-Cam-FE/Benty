@@ -1,0 +1,71 @@
+section.cooperation-7(class="section-py bg-Primary-Silver")
+	.container 
+		h2(class="title-48 text-center mb-base") Công nghệ in mới của nhà Benty
+		.cooperation-7-slide(class="relative")
+			.swiper 
+				.swiper-wrapper 
+					-for(var i = 0; i < 3; i++)
+						.swiper-slide
+							.item(class="group")
+								.image 
+									a(href="#popup-technology" class="img-ratio ratio:pt-[293_440] rounded-2xl zoom-img" data-fancybox)
+										+PugImg() 
+								.content(class="mt-6 text-center")
+									h3(class="lg:text-32 text-2xl font-normal text-Neutral-Title group-hover:text-Primary-Red")
+										a(href="#") Công nghệ vải
+			.wrap-button-slide-mobile(class="flex lg:hidden items-center justify-center gap-3 mt-base")
+				.btn.btn-prev.btn-sw-1
+				.btn.btn-next.btn-sw-1
+
+#popup-technology.popup-technology(style="display: none;" data-fancybox-modal)
+	.popup-content 
+		h3(class="lg:text-32 text-2xl font-bold text-Neutral-White py-4 px-5 bg-Primary-Red") Công nghệ mới trong sản xuất của Benty
+		.popup-main(class="bg-Neutral-White flex flex-col md:flex-row")
+			.col-left(class="md:rem:w-[280px] w-full border-r border-r-Neutral-100")
+				.item-tab(class="flex items-center justify-between rem:py-[10px] px-5" data-id="1")
+					span Công nghệ vải
+					.icon 
+						i.fa-solid.fa-chevron-right
+				.item-tab(class="flex items-center justify-between rem:py-[10px] px-5" data-id="2")
+					span Công nghệ may
+					.icon 
+						i.fa-solid.fa-chevron-right
+				.item-tab(class="flex items-center justify-between rem:py-[10px] px-5" data-id="3")
+					span Công nghệ in/thêu
+					.icon 
+						i.fa-solid.fa-chevron-right
+			.col-right(class="md:w-[calc(100%-14.583333333333334rem)] w-full py-5 pr-2 md:pl-10 pl-6 bg-Neutral-White")
+				.scroll-wrapper
+					.content-tab(class="pr-5" data-id="1")
+						h3(class="text-32 font-bold text-Neutral-Title lg:mb-7 mb-3") Công nghệ vải
+						.format-content(class="gap-5 text-lg")
+							p Mô tả: CoolxPrint sản xuất túi vải canvas dày dặn, đường may chắc chắn, sử dụng để đồ cá nhân, máy tính. Với chiếc túi tote này, bạn hoàn toàn có thể tự tin lựa chọn làm phụ kiện để đi học, đi chơi, du lịch, công tác, …
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum officiis facilis omnis. Eos ex suscipit officiis, eligendi, error totam distinctio debitis fuga commodi voluptates est, excepturi sapiente placeat quaerat eum natus molestias sequi laboriosam quas! Quod necessitatibus veritatis, molestiae nostrum voluptatum, expedita vitae nulla sunt tenetur quaerat, sed odit facilis.
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eaque, facilis adipisci, quis quasi facere, fugiat molestiae incidunt recusandae ad dolorem non beatae voluptates! Iusto sit nisi esse incidunt provident!
+							p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, veritatis consequuntur perferendis laboriosam quis officiis quisquam provident repudiandae atque amet quo excepturi, facere, eligendi rem! Id molestias rem molestiae dolorum.
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia velit inventore, nobis cupiditate deleniti repellendus hic facilis incidunt consequuntur similique aspernatur, natus tempora adipisci vel perferendis! Debitis, voluptas. Repellendus, rem.
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem reiciendis magni possimus veritatis nihil vero tempore doloremque enim. Id ullam sed est libero, rem amet veritatis officiis consequuntur molestias minus.
+							p 
+								+PugImg()
+					.content-tab(class="pr-5" data-id="2")
+						h3(class="text-32 font-bold text-Neutral-Title mb-7") Công nghệ may
+						.format-content(class="gap-5 text-lg")
+							p Mô tả: CoolxPrint sản xuất túi vải canvas dày dặn, đường may chắc chắn, sử dụng để đồ cá nhân, máy tính. Với chiếc túi tote này, bạn hoàn toàn có thể tự tin lựa chọn làm phụ kiện để đi học, đi chơi, du lịch, công tác, …
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum officiis facilis omnis. Eos ex suscipit officiis, eligendi, error totam distinctio debitis fuga commodi voluptates est, excepturi sapiente placeat quaerat eum natus molestias sequi laboriosam quas! Quod necessitatibus veritatis, molestiae nostrum voluptatum, expedita vitae nulla sunt tenetur quaerat, sed odit facilis.
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eaque, facilis adipisci, quis quasi facere, fugiat molestiae incidunt recusandae ad dolorem non beatae voluptates! Iusto sit nisi esse incidunt provident!
+							p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, veritatis consequuntur perferendis laboriosam quis officiis quisquam provident repudiandae atque amet quo excepturi, facere, eligendi rem! Id molestias rem molestiae dolorum.
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia velit inventore, nobis cupiditate deleniti repellendus hic facilis incidunt consequuntur similique aspernatur, natus tempora adipisci vel perferendis! Debitis, voluptas. Repellendus, rem.
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem reiciendis magni possimus veritatis nihil vero tempore doloremque enim. Id ullam sed est libero, rem amet veritatis officiis consequuntur molestias minus.
+							p 
+								+PugImg()
+					.content-tab(class="pr-5" data-id="3")
+						h3(class="text-32 font-bold text-Neutral-Title mb-7") Công nghệ in/thêu
+						.format-content(class="gap-5 text-lg")
+							p Mô tả: CoolxPrint sản xuất túi vải canvas dày dặn, đường may chắc chắn, sử dụng để đồ cá nhân, máy tính. Với chiếc túi tote này, bạn hoàn toàn có thể tự tin lựa chọn làm phụ kiện để đi học, đi chơi, du lịch, công tác, …
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum officiis facilis omnis. Eos ex suscipit officiis, eligendi, error totam distinctio debitis fuga commodi voluptates est, excepturi sapiente placeat quaerat eum natus molestias sequi laboriosam quas! Quod necessitatibus veritatis, molestiae nostrum voluptatum, expedita vitae nulla sunt tenetur quaerat, sed odit facilis.
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eaque, facilis adipisci, quis quasi facere, fugiat molestiae incidunt recusandae ad dolorem non beatae voluptates! Iusto sit nisi esse incidunt provident!
+							p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, veritatis consequuntur perferendis laboriosam quis officiis quisquam provident repudiandae atque amet quo excepturi, facere, eligendi rem! Id molestias rem molestiae dolorum.
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia velit inventore, nobis cupiditate deleniti repellendus hic facilis incidunt consequuntur similique aspernatur, natus tempora adipisci vel perferendis! Debitis, voluptas. Repellendus, rem.
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem reiciendis magni possimus veritatis nihil vero tempore doloremque enim. Id ullam sed est libero, rem amet veritatis officiis consequuntur molestias minus.
+							p 
+								+PugImg()

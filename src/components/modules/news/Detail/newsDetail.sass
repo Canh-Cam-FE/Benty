@@ -1,0 +1,18 @@
+.news-detail
+	.col-left
+		.news-item-meta>*+*
+			@apply pl-2 border-l border-l-Neutral-200
+		.sticky-share-post
+			ul
+				@apply flex flex-col gap-3
+				li
+					a
+						@apply w-10 h-10 inline-flex items-center justify-center
+						@apply bg-Primary-Red text-Neutral-White rounded-full
+@media (max-width: 1023.98px)
+	.news-detail
+		.col-left
+			.sticky-share-post
+				@apply static
+				ul
+					@apply flex-row mt-5
