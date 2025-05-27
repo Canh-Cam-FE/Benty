@@ -95,7 +95,7 @@ mixin ProductItem()
 	.product-item(class="group")
 		.image(class="rounded-2xl border border-Neutral-100 group relative overflow-hidden")
 			a(href="#" class="img-ratio ratio:pt-[360_320] rounded-2xl zoom-img")
-				+PugImg("./img/product.png")
+				img.product-img(src="./img/product.png" alt="Sản phẩm màu đỏ")
 			.button-add-cart(class="absolute flex justify-center bottom-0 left-0 w-full translate-y-full opacity-0 group-hover:-translate-y-10 group-hover:opacity-100 transition-all duration-500 z-10")
 				a(href="#" class="btn-add-cart")  
 					span THÊM VÀO GIỎ HÀNG
@@ -105,11 +105,11 @@ mixin ProductItem()
 			.color 
 				ul.color-list 
 					li 
-						span 
+						span.color-btn(data-img="./img/product.png" style="background-color: #e07700")
 					li 
-						span 
+						span.color-btn(data-img="./img/product-blue.png" style="background-color: #45D358")
 					li 
-						span 
+						span.color-btn(data-img="./img/product-yellow.png" style="background-color: #45A4D3")
 			.content-info 
 				h3(class="text-lg font-normal text-Neutral-Body mb-2 group-hover:text-Primary-Red")
 					a(href="#") Body chip cài vai Benty

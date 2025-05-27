@@ -69,6 +69,37 @@ $(document).ready(function () {
 			menuIcon.classList.add("fa-bars");
 		}
 	});
+
+	const productItems = document.querySelectorAll(".product-item");
+
+	productItems.forEach((product) => {
+		const colorButtons = product.querySelectorAll(".color-btn");
+		const productImg = product.querySelector(".product-img");
+
+		if (colorButtons.length > 0 && productImg) {
+			// Active màu đầu tiên khi load
+			const firstBtn = colorButtons[0];
+			const firstSrc = firstBtn.getAttribute("data-img");
+			if (firstSrc) {
+				productImg.src = firstSrc;
+				firstBtn.classList.add("active");
+			}
+		}
+
+		colorButtons.forEach((btn) => {
+			btn.addEventListener("click", () => {
+				const newSrc = btn.getAttribute("data-img");
+				if (newSrc && productImg) {
+					productImg.src = newSrc;
+
+					// Xóa class active ở các nút cùng nhóm
+					colorButtons.forEach((b) => b.classList.remove("active"));
+					// Thêm class active cho nút được click
+					btn.classList.add("active");
+				}
+			});
+		});
+	});
 });
 
 export function toggleCheckbox() {

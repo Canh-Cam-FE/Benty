@@ -113,9 +113,11 @@
 				ul.color-list 
 					@apply flex items-center gap-2 mb-4
 					li
-						@apply w-6 h-6 inline-flex
-						span
-							@apply w-full h-full inline-flex bg-Primary-Orange rounded-full
+						@apply w-6 h-6 inline-flex 
+						span.color-btn
+							@apply w-full h-full inline-flex bg-Primary-Orange rounded-full p-1 cursor-pointer
+							&.active
+								@apply border-2 border-Primary-Red
 			.content-info 
 				.discount
 					line-height: calc( 16 / 14 )

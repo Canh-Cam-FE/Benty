@@ -92,8 +92,6 @@ function swiperHome5() {
 		slidesPerView: 1,
 		spaceBetween: 16,
 		modules: [Autoplay, Scrollbar], // Đảm bảo đã import EffectFade
-
-		grabCursor: true,
 		scrollbar: {
 			el: ".swiper-scrollbar",
 			hide: false,
