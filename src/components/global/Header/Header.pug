@@ -6,11 +6,17 @@ header.header
 				i.fa-sharp.fa-regular.fa-magnifying-glass
 	.header-main(class="")
 		.header-wrap(class="flex items-center rem:gap-[66px]")
-			.header-logo(class="rem:w-[163px]")
+			.header-logo(class="rem:w-[163px] relative")
 				a(href="#" class="img-ratio ratio:pt-[60_163]")
 					img.logo-default(src="./img/logo-primary.svg", alt="") 
 					img.logo-active(src="./img/logo.svg", alt="") 
-			.header-bar-icon#menuToggle
+				.logo-circle
+				.line-circle.line-1
+				.line-circle.line-2
+				.line-circle.line-3
+				.line-circle.line-4
+				.line-circle.line-5
+			.header-bar#menuToggle
 				i#menuIcon.fa-solid.fa-bars
 			.nav-language-mobile(class="opacity-0 invisible")
 				.header-en(class="rem:w-[36px]")
@@ -64,7 +70,7 @@ header.header
 				a(href="#")
 					i.fa-light.fa-cart-flatbed-boxes
 	.nav-links#mobileMenu
-		ul(class="")
+		ul.header-nav-menu
 			li 
 				a(href="./about.html") Mẹ ơi, Benty là...
 			li
@@ -75,12 +81,14 @@ header.header
 				a(href="#") Hỗ trợ khách hàng
 			li 
 				a(href="#") Tin tức
-		.nav-links-social 
-			h4(class="text-xl font-normal text-Neutral-White mb-4") Kết nối
-			.social 
-				a(href="#") 
-					i.fa-brands.fa-facebook-f
-				a(href="#") 
-					i.fa-brands.fa-instagram
-				a(href="#") 
-					i.fa-brands.fa-tiktok
+			.nav-links-social 
+				h4(class="text-xl font-normal text-Neutral-White mb-4") Kết nối
+				.social 
+					a(href="#") 
+						i.fa-brands.fa-facebook-f
+					a(href="#") 
+						i.fa-brands.fa-instagram
+					a(href="#") 
+						i.fa-brands.fa-tiktok
+			
+		

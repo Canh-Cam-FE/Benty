@@ -44,31 +44,31 @@ $(document).ready(function () {
 		cta.classList.remove("active");
 	});
 
-	const menuToggle = document.getElementById("menuToggle");
-	const mobileMenu = document.getElementById("mobileMenu");
-	const navLangMobile = document.querySelector(".nav-language-mobile");
-	const menuIcon = document.getElementById("menuIcon");
+	// const menuToggle = document.getElementById("menuToggle");
+	// const mobileMenu = document.getElementById("mobileMenu");
+	// const navLangMobile = document.querySelector(".nav-language-mobile");
+	// const menuIcon = document.getElementById("menuIcon");
 
-	menuToggle.addEventListener("click", () => {
-		mobileMenu.classList.toggle("open");
+	// menuToggle.addEventListener("click", () => {
+	// 	mobileMenu.classList.toggle("open");
 
-		// Toggle ngôn ngữ
-		if (mobileMenu.classList.contains("open")) {
-			navLangMobile.classList.add("opacity-100", "visible");
-			navLangMobile.classList.remove("opacity-0", "invisible");
+	// 	// Toggle ngôn ngữ
+	// 	if (mobileMenu.classList.contains("open")) {
+	// 		navLangMobile.classList.add("opacity-100", "visible");
+	// 		navLangMobile.classList.remove("opacity-0", "invisible");
 
-			// Đổi sang icon "X"
-			menuIcon.classList.remove("fa-bars");
-			menuIcon.classList.add("fa-xmark");
-		} else {
-			navLangMobile.classList.remove("opacity-100", "visible");
-			navLangMobile.classList.add("opacity-0", "invisible");
+	// 		// Đổi sang icon "X"
+	// 		menuIcon.classList.remove("fa-bars");
+	// 		menuIcon.classList.add("fa-xmark");
+	// 	} else {
+	// 		navLangMobile.classList.remove("opacity-100", "visible");
+	// 		navLangMobile.classList.add("opacity-0", "invisible");
 
-			// Đổi lại icon bars
-			menuIcon.classList.remove("fa-xmark");
-			menuIcon.classList.add("fa-bars");
-		}
-	});
+	// 		// Đổi lại icon bars
+	// 		menuIcon.classList.remove("fa-xmark");
+	// 		menuIcon.classList.add("fa-bars");
+	// 	}
+	// });
 
 	const productItems = document.querySelectorAll(".product-item");
 

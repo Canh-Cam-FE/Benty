@@ -10,7 +10,7 @@ body.home
 			img.logo-active
 				@apply hidden
 			img.logo-default
-				@apply block
+				@apply block z-100
 		.header-main
 			@apply xl:flex hidden items-center justify-between relative z-[1100]
 		.header-menu
@@ -23,10 +23,10 @@ body.home
 				&[class*='current']
 					&>a
 						@apply text-Primary-Red
-		.header-bar-icon
+		.header-bar
 			@apply w-7 h-7 flex-shrink-0 
 			@apply inline-flex items-center justify-center 
-			@apply text-Neutral-White  text-32 cursor-pointer
+			@apply text-Neutral-White  text-32 cursor-pointer relative z-20
 		
 		.header-right
 			.header-search
@@ -51,6 +51,8 @@ body.home
 			@apply border-b border-b-Primary-Red rem:px-[60px]
 			&::before
 				content: none
+			.logo-circle
+				@apply hidden
 			.header-logo
 				img.logo-active
 					@apply block
@@ -77,6 +79,7 @@ body.home
 					@apply bg-Neutral-50
 					i
 						@apply text-Neutral-400
+
 
 .header
 	background-image: none
@@ -113,9 +116,10 @@ body.home
 				&>a
 					@apply text-Primary-Red
 	.header-logo
+		
 		.logo-default
 			@apply hidden
-	.header-bar-icon
+	.header-bar
 		@apply hidden
 	.header-user
 		i
@@ -131,6 +135,67 @@ body.home
 			@apply block w-full h-full object-cover
 		img.search-default 
 			@apply hidden w-full h-full object-cover
+	.logo-circle
+		@apply rem:w-[62rem] rem:h-[62rem] md:rem:w-[60rem] md:rem:h-[60rem]
+		@apply absolute top-[1rem] left-0
+		@apply rounded-full pointer-events-none
+		transform-origin: center center
+		-webkit-backface-visibility: hidden
+		backface-visibility: hidden
+		-webkit-perspective: 1000
+		perspective: 1000
+		transition: transform 500ms cubic-bezier(.4,0,.2,1)
+		transform-origin: center center
+		background: radial-gradient(1738.99% 141.42% at 100% 0%, #76AECC 0%, #6493AC 100%)
+		transform: translate(-48.55%, -48.55%) scale(0.00)
+		@screen md
+			transform: translate(-48.5%, -48.5%) scale(0.009)
+	.line-circle
+		transition: transform 500ms cubic-bezier(.4,0,.2,1)
+		@apply w-2.5 h-2.5 absolute rounded-full z-2 top-1/2 -translate-y-1/2 left-[8%] -translate-x-[50%] pointer-events-none
+		&.line-1
+			width: rr(64px)
+			height: rr(64px)
+			@apply border border-white/20 scale-0
+		&.line-2
+			width: rr(128px)
+			height: rr(128px)
+			@apply border border-white/20 scale-0
+		&.line-3
+			width: rr(256px)
+			height: rr(256px)
+			@apply border border-white/20 scale-0
+		&.line-4
+			width: rr(512px) 
+			height: rr(512px)
+			@apply border border-white/20 scale-0
+		&.line-5
+			width: 50rem
+			height: 50rem
+			@screen md
+				width: rr(1024px)
+				height: rr(1024px)
+			@apply border border-white/20 scale-0
+	.nav-links
+		@apply fixed left-0  pl-5 md:pl-[3.1rem] top-[5rem] lg:top-[6rem] z-[9999]
+		@apply opacity-0 pointer-events-none transition-all duration-200 delay-0
+		ul.header-nav-menu
+			@apply flex flex-col gap-3
+			li
+				a
+					line-height: calc( 38 / 32 )
+					@apply text-32 font-bold text-Neutral-White normal-case
+					@apply border-b border-transparent
+					&:hover
+						@apply border-b border-b-Neutral-White
+			.nav-links-social 
+				@apply mt-13
+				.social
+					@apply flex items-center gap-3
+					a
+						@apply w-10 h-10 inline-flex items-center justify-center
+						@apply bg-Neutral-White text-Primary-Red rounded-full
+			
 
 	.search-bar-container
 		position: absolute
@@ -152,50 +217,32 @@ body.home
 		visibility: hidden
 		transition: opacity 0.3s ease-in-out, visibility 0s 0.3s
 
+body.isOpenMenu
+	.header
+		.header-bar
+			@apply opacity-100 pointer-events-auto
+		.nav-language-mobile 
+			@apply opacity-100 pointer-events-auto visible
+		.logo-circle
+			transform: translate(-48.5%, -48.5%) scale(1)
+		.line-circle
+			@apply scale-[1] opacity-100
+			&.line-1
+				// @apply  delay-100
+			&.line-2
+				transition-delay: 50ms
+			&.line-3
+				transition-delay: 100ms
+			&.line-4
+				transition-delay: 200msm
+			&.line-5
+				transition-delay: 300ms
+		.nav-links
+			@apply opacity-100 pointer-events-auto delay-200 duration-500 
 .search-bar-container.active
 	opacity: 1
 	visibility: visible
 	transition: opacity 0.3s ease-in-out, visibility 0s
-.nav-links
-	position: fixed
-	top: 0
-	left: 0
-	background-image: radial-gradient(1738.99% 141.42% at 100% 0%, #76AECC 0%, #6493AC 100%)
-	height: 100vh
-	width: 100vw
-	flex-direction: column
-	pointer-events: none
-	clip-path: circle(0px at 0% 0%)
-	-webkit-clip-path: circle(0px at 0% 0%)
-	transition: clip-path 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease
-	z-index: 999
-	display: flex
-	opacity: 0
-	
-	&.open
-		clip-path: circle(600px at 0% 0%)
-		-webkit-clip-path: circle(600px at 0% 0%)
-		pointer-events: auto
-		display: flex
-		opacity: 1
-
-		
-	.nav-links-social 
-		@apply ml-15 mt-13
-		.social
-			@apply flex items-center gap-3
-			a
-				@apply w-10 h-10 inline-flex items-center justify-center
-				@apply bg-Neutral-White text-Primary-Red rounded-full
-	ul
-		@apply rem:w-[400px] ml-15 mt-30 flex flex-col gap-3
-		li
-			a
-				line-height: calc( 38 / 32 )
-				@apply text-32 font-bold text-Neutral-White normal-case
-				@apply border-b border-transparent
-				&:hover
-					@apply border-b border-b-Neutral-White
 
 @media (max-width: 1279.98px)
 	.header		
@@ -221,20 +268,19 @@ body.home
 						@apply bg-Primary-Red 
 						i
 							@apply text-Neutral-White
-	
 		.nav-links
 			clip-path: none !important
 			pointer-events: none
 			transition: transform 0.5s ease, opacity 0.5s ease
 			transform: translateX(100%)
 			height: calc(100dvh - var(--header-height))
-			@apply top-[var(--header-height)] w-full z-999 overflow-y-auto overflow-hidden flex 
+			@apply top-[var(--header-height)] w-full z-999 overflow-y-auto overflow-hidden flex pl-0
+			@apply bg-Primary-Red
 			ul
 				@apply flex flex-col items-stretch w-full mt-0 ml-0 gap-5  px-[16px] py-6
 				li
-					
 					a
-						@apply text-Neutral-White pb-1 border-b border-b-transparent inline-flex items-center text-[18px]
+						@apply text-Neutral-White pb-1 border-b border-b-transparent inline-flex items-center text-[18px] #{!important}
 					&.menu-item-has-children
 						@apply relative 
 						&>a
@@ -250,8 +296,8 @@ body.home
 					&[class*='current']
 						&>a
 							@apply border-b border-b-Neutral-White
-			.nav-links-social
-				@apply ml-4 mt-5
+	
+		
 	body.isOpenMenu
 		.nav-links
 			transform: translateX(0)
