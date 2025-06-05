@@ -117,9 +117,8 @@ mixin ProductItem()
 					.price-old(class="text-xl font-bold text-Primary-Red") 105.000 ₫
 					.discount(class="bg-Primary-Orange rounded-[32px] px-3 py-2 text-sm font-black text-Neutral-White tracking-[0.56px]") -30%
 					.price-new(class="font-primary2 line-through text-Neutral-300 font-normal") 79.000 ₫
-				.sell-line 
-					
-					span Bán chạy
+				.sell-line(data-percent="20") 
+					span 0% đã bán
 				
 mixin NewLetterSection()
 	.newletter(setBackground="./img/home-10-bg.png" class="")

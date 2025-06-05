@@ -44,6 +44,12 @@ $(document).ready(function () {
 		cta.classList.remove("active");
 	});
 
+	document.querySelectorAll(".sell-line").forEach((el) => {
+		const percent = el.dataset.percent || 0;
+		el.style.setProperty("--percent", percent);
+		el.querySelector("span").textContent = `${percent}%`;
+	});
+
 	// const menuToggle = document.getElementById("menuToggle");
 	// const mobileMenu = document.getElementById("mobileMenu");
 	// const navLangMobile = document.querySelector(".nav-language-mobile");
