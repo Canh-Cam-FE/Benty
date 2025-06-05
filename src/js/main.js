@@ -102,6 +102,28 @@ $(document).ready(function () {
 	});
 });
 
+function startCountdown(durationInSeconds) {
+	let remaining = durationInSeconds;
+
+	const hourEl = document.querySelector(".countdown .hour");
+	const minuteEl = document.querySelector(".countdown .minute");
+	const secondEl = document.querySelector(".countdown .second");
+
+	const timer = setInterval(() => {
+		const hours = String(Math.floor(remaining / 3600)).padStart(2, "0");
+		const minutes = String(Math.floor((remaining % 3600) / 60)).padStart(2, "0");
+		const seconds = String(remaining % 60).padStart(2, "0");
+
+		hourEl.textContent = hours;
+		minuteEl.textContent = minutes;
+		secondEl.textContent = seconds;
+
+		if (--remaining < 0) clearInterval(timer);
+	}, 1000);
+}
+
+startCountdown(9059);
+
 export function toggleCheckbox() {
 	document.querySelectorAll(".product-checkbox").forEach((checkbox) => {
 		// Đảm bảo checkbox không có class "checked" khi mới load
@@ -170,6 +192,17 @@ export function indicatorSlide() {
 		});
 	}
 }
+
+setTimeout(() => {
+	Fancybox.show([
+		{
+			src: "#popup-form-coupon",
+			type: "inline",
+			dragToClose: false,
+			backdropClick: false,
+		},
+	]);
+}, 3000);
 
 // fancyfox popup
 document.addEventListener("DOMContentLoaded", function () {

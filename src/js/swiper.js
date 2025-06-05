@@ -493,7 +493,6 @@ function swiperProductDetail() {
 	const prevBtn = colLeft.querySelector(".btn-prev");
 	const nextBtn = colLeft.querySelector(".btn-next");
 
-	// ⚠️ Quan trọng: phải kiểm tra tồn tại
 	if (!thumbWrapper || !mainWrapper) {
 		console.warn("Không tìm thấy swiper element.");
 		return;
@@ -530,7 +529,7 @@ function swiperProductDetail() {
 	const swiperDetail = new Swiper(mainWrapper, {
 		spaceBetween: 10,
 		slidesPerView: 1,
-		loop: true,
+		loop: false,
 		observer: true,
 		observeParents: true,
 		modules: [Autoplay, Navigation, Thumbs],

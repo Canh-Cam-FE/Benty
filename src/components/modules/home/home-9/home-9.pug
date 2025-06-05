@@ -39,4 +39,19 @@ section.home-9(class="bg-bg  section-py")
 					+ButtonSecondary("Khám phá thêm")
 			.tabslet-content#tab2
 				p ok
-			
+#popup-form-coupon.popup-form-coupon(style="display: none;" data-fancybox-modal)
+	.popup-content 
+		h3(class="text-Primary-Orange text-center text-3xl") Mã giảm giá
+		-for(var i = 0; i < 3; i ++)
+			.item(class="flex")
+				.image(class="rem:w-[126px] flex-shrink-0")
+					a(href="#" class="img-ratio")
+						+PugImg("./img/coupon.svg")
+				.content(class="w-[calc(100%-6.5625rem)]")
+					.top 
+						h3(class="text-2xl font-bold text-Neutral-Title mb-1") Giảm 100K
+						.title(class="text-sm font-normal text-Neutral-Body") Cho đơn hàng từ 500K.
+					.bottom(class="flex flex-col items-start lg:flex-row lg:items-center justify-between")
+						.date(class="text-sm font-normal text-Neutral-400") Có hiệu lực từ: 29/04/2025
+						.btn-save(class="bg-Primary-Gradient py-1 px-2 rounded-1 text-sm text-Neutral-White font-bold")
+							span Lưu mã
